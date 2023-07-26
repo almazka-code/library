@@ -1,0 +1,25 @@
+.nav__list {
+  @extend %flex;
+}
+
+.nav__link {
+  padding: 0 15px;
+  line-height: 50px;
+  color: $color-light;
+
+  &:focus-visible {
+    @extend %outline;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: $color-primary;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-color: $color-primary;
+  }
+
+  &:active:not(:focus-visible) {
+    color: $color-active;
+    text-decoration-color: $color-active;
+  }
+}

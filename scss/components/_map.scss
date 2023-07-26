@@ -1,0 +1,5 @@
+.map {
+  width: 50%;
+  height: 414px;
+  @include background-image (url("../assets/img/map.jpg"));
+}
