@@ -38,6 +38,11 @@
   }
 }
 
+.carousel__control {
+  font-size: 0;
+  line-height: 30px;
+}
+
 .carousel__pagination {
   position: relative;
   display: inline-block;

@@ -1,36 +1,4 @@
 @charset "UTF-8";
-.social__icon, .profile__icon, a,
-button {
-  transition: all 0.3s ease;
-}
-
-body {
-  font-family: "Inter", Verdana, sans-serif;
-}
-
-.library-card__subtitle, .form__input::placeholder, .form__title, .menu__price, .menu__title, .showcase__title, .welcome__title, .title, .main-title {
-  font-family: "Forum", Verdana, sans-serif;
-}
-
-.social:focus-visible, .profile:focus-visible, .nav__link:focus-visible, .address__link:focus-visible, .footer__link:focus-visible {
-  outline: 0;
-  outline: 1px solid #bb945f;
-  outline-offset: 3px;
-}
-
-.menu__item, .footer__bottom, .footer__top, .nav__list, .header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.address__link:hover:not(:focus-visible), .footer__link:hover:not(:focus-visible) {
-  color: #bb945f;
-}
-.address__link:active:not(:focus-visible), .footer__link:active:not(:focus-visible) {
-  color: #957548;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -346,25 +314,57 @@ section, main, header, footer, article {
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter Regular"), local("Inter-Regular"), url("../../assets/fonts/Inter-Regular.woff2") format("woff2"), url("../../assets/fonts/Inter-Regular.woff") format("woff");
+  src: local("Inter Regular"), local("Inter-Regular"), url("../assets/fonts/Inter-Regular.woff2") format("woff2"), url("../assets/fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: local("Inter Bold"), local("Inter-Bold"), url("../../assets/fonts/Inter-Bold.woff2") format("woff2"), url("../../assets/fonts/Inter-Bold.woff") format("woff");
+  src: local("Inter Bold"), local("Inter-Bold"), url("../assets/fonts/Inter-Bold.woff2") format("woff2"), url("../assets/fonts/Inter-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Forum";
-  src: local("Forum Regular"), local("Forum-Regular"), url("../../assets/fonts/Forum-Regular.woff2") format("woff2"), url("../../assets/fonts/Forum-Regular.woff") format("woff");
+  src: local("Forum Regular"), local("Forum-Regular"), url("../assets/fonts/Forum-Regular.woff2") format("woff2"), url("../assets/fonts/Forum-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+.social__icon, .profile__icon, a,
+button {
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Inter", Verdana, sans-serif;
+}
+
+.library-card__subtitle, .form__input::placeholder, .form__title, .menu__price, .menu__title, .showcase__title, .welcome__title, .title, .main-title {
+  font-family: "Forum", Verdana, sans-serif;
+}
+
+.social__item:focus-visible, .profile:focus-visible, .nav__link:focus-visible, .address__link:focus-visible, .footer__link:focus-visible {
+  outline: 0;
+  outline: 1px solid #bb945f;
+  outline-offset: 3px;
+}
+
+.menu__item, .footer__bottom, .footer__top, .nav__list, .header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address__link:hover:not(:focus-visible), .footer__link:hover:not(:focus-visible) {
+  color: #bb945f;
+}
+.address__link:active:not(:focus-visible), .footer__link:active:not(:focus-visible) {
+  color: #957548;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -688,6 +688,11 @@ ul {
 .carousel__slide--five {
   display: none;
   background-image: url("../assets/img/about/about5.jpg");
+}
+
+.carousel__control {
+  font-size: 0;
+  line-height: 30px;
 }
 
 .carousel__pagination {
@@ -1050,11 +1055,11 @@ ul {
   margin-right: 20px;
 }
 
-.social-group {
+.social {
   display: flex;
 }
 
-.social {
+.social__item {
   width: 39px;
   height: 39px;
   padding: 7.5px;
@@ -1073,11 +1078,11 @@ ul {
   background-image: url("../assets/svg/twitter.svg");
 }
 
-.social:active .social__icon--twitter {
+.social__item:active .social__icon--twitter {
   background-image: url("../assets/svg/twitter-active.svg");
 }
 
-.social:hover .social__icon--twitter {
+.social__item:hover .social__icon--twitter {
   background-image: url("../assets/svg/twitter-hover.svg");
 }
 
@@ -1085,11 +1090,11 @@ ul {
   background-image: url("../assets/svg/instagram.svg");
 }
 
-.social:hover .social__icon--instagram {
+.social__item:hover .social__icon--instagram {
   background-image: url("../assets/svg/instagram-hover.svg");
 }
 
-.social:active .social__icon--instagram {
+.social__item:active .social__icon--instagram {
   background-image: url("../assets/svg/instagram-active.svg");
 }
 
@@ -1097,11 +1102,11 @@ ul {
   background-image: url("../assets/svg/facebook.svg");
 }
 
-.social:hover .social__icon--facebook {
+.social__item:hover .social__icon--facebook {
   background-image: url("../assets/svg/facebook-hover.svg");
 }
 
-.social:active .social__icon--facebook {
+.social__item:active .social__icon--facebook {
   background-image: url("../assets/svg/facebook-active.svg");
 }
 

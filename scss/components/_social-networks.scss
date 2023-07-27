@@ -1,8 +1,8 @@
-.social-group {
+.social {
   display: flex;
 }
 
-.social {
+.social__item {
   width: 39px;
   height: 39px;
   padding: 7.5px;
@@ -27,11 +27,11 @@
   background-image: url("../assets/svg/twitter.svg");
 }
 
-.social:active .social__icon--twitter {
+.social__item:active .social__icon--twitter {
   background-image: url("../assets/svg/twitter-active.svg");
 }
 
-.social:hover .social__icon--twitter {
+.social__item:hover .social__icon--twitter {
   background-image: url("../assets/svg/twitter-hover.svg");
 }
 
@@ -39,11 +39,11 @@
   background-image: url("../assets/svg/instagram.svg");
 }
 
-.social:hover .social__icon--instagram {
+.social__item:hover .social__icon--instagram {
   background-image: url("../assets/svg/instagram-hover.svg");
 }
 
-.social:active .social__icon--instagram {
+.social__item:active .social__icon--instagram {
   background-image: url("../assets/svg/instagram-active.svg");
 }
 
@@ -51,10 +51,10 @@
   background-image: url("../assets/svg/facebook.svg");
 }
 
-.social:hover .social__icon--facebook {
+.social__item:hover .social__icon--facebook {
   background-image: url("../assets/svg/facebook-hover.svg");
 }
 
-.social:active .social__icon--facebook {
+.social__item:active .social__icon--facebook {
   background-image: url("../assets/svg/facebook-active.svg");
 }
