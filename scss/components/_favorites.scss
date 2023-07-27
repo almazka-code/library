@@ -1,0 +1,31 @@
+.favorites__title {
+  margin-bottom: 55px;
+}
+
+.favorites__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.favorites__radio-btn {
+  margin-bottom: 25px;
+  transform: translateX(-5px);
+}
+
+.favorites__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  grid-row-gap: 40px;
+  grid-column-gap: 260px;
+  padding-right: 40px;
+}
+
+.favorites__item {
+  position: relative;
+}
+
+.spring,
+.summer,
+.autumn {
+  display: none;
+}

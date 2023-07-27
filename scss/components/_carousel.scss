@@ -1,0 +1,68 @@
+.carousel {
+  width: 100%;
+  text-align: center;
+}
+
+.carousel__list {
+  @include flex (25px);
+  margin-bottom: 35px;
+}
+
+.carousel__slide {
+  width: 100%;
+  min-height: 560px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &--one {
+    background-image: url("../assets/img/about/about1.jpg");
+  }
+
+  &--two {
+    background-image: url("../assets/img/about/about2.jpg");
+  }
+
+  &--three {
+    background-image: url("../assets/img/about/about3.jpg");
+  }
+
+  &--four {
+    display: none;
+    background-image: url("../assets/img/about/about4.jpg");
+  }
+
+  &--five {
+    display: none;
+    background-image: url("../assets/img/about/about5.jpg");
+  }
+}
+
+.carousel__control {
+  font-size: 0;
+  line-height: 30px;
+}
+
+.carousel__pagination {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.carousel__pagination::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: $color-background;
+  border-radius: 50%;
+}
+
+.carousel__pagination--active::after {
+  background-color: $color-primary;
+}

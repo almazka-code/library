@@ -1,0 +1,25 @@
+.library-card__info {
+  max-width: 456px;
+  text-align: end;
+}
+
+.library-card__subtitle {
+  margin-bottom: 35px;
+  @extend %font-add;
+  @include font ($size: 30px, $height: normal, $spacing: 0.6px);
+}
+
+.library-card__text {
+  margin-bottom: 25px;
+  letter-spacing: 0.4px;
+}
+
+.library-card__buttons {
+  display: flex;
+  justify-content: end;
+}
+
+.library-card__btn:first-child {
+  margin-right: 20px;
+}
+

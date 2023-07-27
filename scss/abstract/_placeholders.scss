@@ -1,0 +1,37 @@
+%transition {
+  transition: all 0.3s ease;
+}
+
+%font-prim {
+  font-family: "Inter", Verdana, sans-serif;
+}
+
+%font-add {
+  font-family: "Forum", Verdana, sans-serif;
+}
+
+%outline {
+  outline: 0;
+  outline: 1px solid $color-primary;
+  outline-offset: 3px;
+}
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%interactive {
+  &:focus-visible {
+    @extend %outline;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: $color-primary;
+  }
+
+  &:active:not(:focus-visible) {
+    color: $color-active;
+  }
+}

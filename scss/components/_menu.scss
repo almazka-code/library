@@ -1,0 +1,53 @@
+.menu__title {
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  color: $color-primary;
+  @extend %font-add;
+  @include font($size: 40px, $height: 40px, $spacing: 2px);
+
+  &--right {
+    text-align: end;
+  }
+}
+
+.menu__item {
+  @extend %flex;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.menu__text {
+  text-transform: capitalize;
+
+  &--left {
+    margin-right: auto;
+  }
+
+  &--right {
+    margin-left: auto;
+  }
+}
+
+.menu__price {
+  @extend %font-add;
+}
+
+.menu__line {
+  position: relative;
+  display: inline-flex;
+  width: 220px;
+  height: auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: $color-primary;
+    transform: translate(-50%, -50%);
+  }
+}

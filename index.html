@@ -9,8 +9,7 @@
 
   <link rel="shortcut icon" href="assets/svg/favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="scss/style.css">
 </head>
 
 <body class="body">
@@ -22,10 +21,10 @@
       <div class="header__wrap">
         <nav class="nav header__nav">
           <div class="close">
-            <button class="close__btn btn-reset"></button>
+            <button class="close__btn"></button>
           </div>
 
-          <ul class="nav__list list-reset">
+          <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
             <li class="nav__item"><a class="nav__link" href="#favorites">Favorites</a></li>
             <li class="nav__item"><a class="nav__link" href="#shop">Coffee shop</a></li>
@@ -33,10 +32,10 @@
             <li class="nav__item"><a class="nav__link" href="#library-card">Library Card</a></li>
           </ul>
         </nav>
-        <button class="btn-reset profile">
+        <button class="profile">
           <span class="profile__icon"></span>
         </button>
-        <button class="btn-reset burger">
+        <button class="burger">
           <span class="burger__line"></span>
           <span class="burger__line"></span>
           <span class="burger__line"></span>
@@ -64,7 +63,7 @@
           a&nbsp;cozy coffee shop inside</p>
 
         <div class="carousel">
-          <ul class="carousel__list list-reset">
+          <ul class="carousel__list">
             <li class="carousel__slide carousel__slide--one"></li>
             <li class="carousel__slide carousel__slide--two"></li>
             <li class="carousel__slide carousel__slide--three"></li>
@@ -88,7 +87,7 @@
         <p class="favorites__text">Pick favorites of season</p>
 
         <!-- custom radio button -->
-        <ul class="favorites__radio-btn radio-btn list-reset">
+        <ul class="favorites__radio-btn radio-btn">
           <li class="radio-btn__item">
             <label class="radio-btn__label radio-btn__label--active" data-tab="#winter">
               <input class="radio-btn__input" name="season" type="radio" value="winter" checked>
@@ -124,7 +123,7 @@
         <div class="favorites__group">
 
           <!-- first group - winter -->
-          <ul class="favorites__list list-reset winter">
+          <ul class="favorites__list winter">
             <li class="favorites__item showcase">
               <article class="showcase__article">
                 <div class="showcase__top">
@@ -138,7 +137,7 @@
                   </p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book1.jpg" alt="The Book Eaters By Sunyi Dean">
               </article>
@@ -154,7 +153,7 @@
                     upstate New York and befriends a beautiful witch.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book2.jpg" alt="Cackle By Rachel Harrison">
               </article>
@@ -171,7 +170,7 @@
                     themes.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book3.jpg"
                   alt="Dante: Poet of the Secular World By Erich Auerbach">
@@ -187,7 +186,7 @@
                     exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset btn--own" disabled>Own</button>
+                  <button class="btn btn--own" disabled>Own</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book4.jpg" alt="The Last Queen By Clive Irving">
               </article>
@@ -195,7 +194,7 @@
           </ul>
 
           <!-- second group - spring-->
-          <ul class="favorites__list list-reset spring">
+          <ul class="favorites__list spring">
             <li class="favorites__item showcase">
               <article class="showcase__article">
                 <div class="showcase__top">
@@ -206,7 +205,7 @@
                     beauty and danger and loss of innocence that is youth.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book5.jpg" alt="The Body By Stephen King">
               </article>
@@ -223,7 +222,7 @@
                     expansive and intimate, resulting in a lyrical indictment of the way things are.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book6.jpg"
                   alt="Carry: A Memoir of Survival on Stolen Land By Toni Jenson">
@@ -239,7 +238,7 @@
                     journal of displacement and belonging, all in one form-defying package of spare prose.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book7.jpg"
                   alt="Days of Distraction By Alexandra Chang">
@@ -256,7 +255,7 @@
                     immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset btn--own" disabled>Own</button>
+                  <button class="btn btn--own" disabled>Own</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book8.jpg" alt="Dominicana By Angie Cruz">
               </article>
@@ -264,7 +263,7 @@
           </ul>
 
           <!-- third group -summer-->
-          <ul class="favorites__list list-reset summer">
+          <ul class="favorites__list summer">
             <li class="favorites__item showcase">
               <article class="showcase__article">
                 <div class="showcase__top">
@@ -276,7 +275,7 @@
                     fields did to the Amazon and her people</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book9.jpg"
                   alt="Crude: A Memoir By Pablo Fajardo & ​​Sophie Tardy-Joubert">
@@ -293,7 +292,7 @@
                     Surfing: The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book10.jpg"
                   alt="Let My People Go Surfing By Yvon Chouinard">
@@ -310,7 +309,7 @@
                     comes after our current age of environmental destruction, racism, sexism, and divisive politics.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book11.jpg"
                   alt="The Octopus Museum: Poems By Brenda Shaughnessy">
@@ -327,7 +326,7 @@
                     villains and dreamers, queens and revolutionaries, lepers and healers.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book12.jpg"
                   alt="Shark Dialogues: A Novel By Kiana Davenport">
@@ -336,7 +335,7 @@
           </ul>
 
           <!-- fourth group - autumn-->
-          <ul class="favorites__list list-reset autumn">
+          <ul class="favorites__list autumn">
             <li class="favorites__item showcase">
               <article class="showcase__article">
                 <div class="showcase__top">
@@ -348,7 +347,7 @@
                     examining the possibilities around how we construct and communicate identity.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book13.jpg" alt="Casual Conversation By Renia White">
               </article>
@@ -364,7 +363,7 @@
                     a million refugees from the Armenian Genocide</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book14.jpg" alt="The Great Fire By Lou Ureneck">
               </article>
@@ -380,7 +379,7 @@
                     game's all-time greatest performers, the Man of Steal, Rickey Henderson?</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book15.jpg"
                   alt="Rickey: The Life and Legend By Howard Bryant">
@@ -397,7 +396,7 @@
                     wounds.</p>
                 </div>
                 <div class="showcase__bottom">
-                  <button class="btn btn-reset">Buy</button>
+                  <button class="btn">Buy</button>
                 </div>
                 <img class="showcase__img" src="assets/img/books/book16.jpg"
                   alt="Slug: And Other Stories By Megan Milks">
@@ -417,10 +416,10 @@
           cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to
           cook you best coffee, and also you can try desserts from bakery.</p>
 
-        <div class="shop__wrapper">
+        <div class="layout-2-columns">
           <div class="menu">
             <h3 class="menu__title">Coffee &amp;&nbsp;Tea</h3>
-            <ul class="menu__list list-reset">
+            <ul class="menu__list">
               <li class="menu__item">
                 <p class="menu__text menu__text--left">Cold Brew Coffee</p>
                 <span class="menu__line"></span>
@@ -455,7 +454,7 @@
           </div>
           <div class="menu">
             <h3 class="menu__title menu__title--right">Desserts &amp;&nbsp;Cakes</h3>
-            <ul class="menu__list list-reset">
+            <ul class="menu__list">
               <li class="menu__item">
                 <p class="menu__text menu__text--right">Forest Gateau</p>
                 <span class="menu__line"></span>
@@ -497,27 +496,27 @@
     <section class="section contacts" id="contacts">
       <div class="container">
         <h2 class="title">Our Contacts</h2>
-        <div class="contacts__wrap">
+        <div class="layout-2-columns">
           <address class="address">
             <p class="address__title">For all Library inquiries:</p>
-            <ul class="address__list list-reset">
+            <ul class="address__list">
               <li class="address__item">
                 <p class="address__text">Please call</p>
-                <a class="address__link interactive" href="tel:+16177302370">(617) 730-2370</a>
+                <a class="address__link" href="tel:+16177302370">(617) 730-2370</a>
               </li>
               <li class="address__item">
                 <p class="address__text">For TTY service, please call</p>
-                <a class="address__link interactive" href="tel:+16177302370">(617) 730-2370</a>
+                <a class="address__link" href="tel:+16177302370">(617) 730-2370</a>
               </li>
               <li class="address__item">
                 <p class="address__text">Putterham Library:</p>
-                <a class="address__link interactive" href="tel:+16177302385">(617) 730-2385</a>
+                <a class="address__link" href="tel:+16177302385">(617) 730-2385</a>
               </li>
             </ul>
             <p class="address__title address__title--staff">Senior Staff</p>
             <div class="address__staff">
               <p class="address__text">Library Director:</p>
-              <a class="address__link address__mail interactive" href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a>
+              <a class="address__link address__mail" href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a>
             </div>
           </address>
           <div class="map"></div>
@@ -530,7 +529,7 @@
     <section class="section library-card" id="library-card">
       <div class="container">
         <h2 class="title">Digital Library Cards</h2>
-        <div class="library-card__wrap">
+        <div class="layout-2-columns">
 
           <div>
             <form class="form" id="form" method="GET" autocomplete="off">
@@ -547,22 +546,23 @@
                       autocomplete="off">
                   </div>
                 </div>
-                <button class="btn btn-reset form__btn" id="form_btn" type="submit">Check the
+                <button class="btn form__btn" id="form_btn" type="submit">Check the
                   card</button>
               </div>
             </form>
           </div>
 
-          <div class="info">
-            <h3 class="info__title">Get a reader card</h3>
-            <p class="info__text">You will be able to see a reader card after logging into account or you can register a
+          <div class="library-card__info">
+            <h3 class="library-card__subtitle">Get a reader card</h3>
+            <p class="library-card__text">You will be able to see a reader card after logging into account or you can
+              register a
               new account</p>
-            <ul class="info__buttons list-reset">
-              <li class="info__item">
-                <button class="btn btn-reset btn--info">Sign&nbsp;Up</button>
+            <ul class="library-card__buttons">
+              <li class="library-card__btn">
+                <button class="btn btn--card">Sign&nbsp;Up</button>
               </li>
-              <li class="info__item">
-                <button class="btn btn-reset btn--info">Log&nbsp;in</button>
+              <li class="library-card__btn">
+                <button class="btn btn--card">Log&nbsp;in</button>
               </li>
             </ul>
 
@@ -578,23 +578,23 @@
       <div class="footer__top">
         <div class="footer__left">
           <address class="footer__address">
-            <a class="footer__link interactive"
+            <a class="footer__link"
               href="https://www.google.com/maps/place/286+Cadman+Plaza+W,+Brooklyn,+NY+11201,+%D0%A1%D0%A8%D0%90/@40.6956666,-73.9912015,19.77z/data=!4m6!3m5!1s0x89c25a49b649b8c3:0x6342a2291cea2e!8m2!3d40.6956458!4d-73.9912976!16s%2Fg%2F11s2lgz8ns?entry=ttu"
               target="_blank">286 Cadman Plaza, New York, NY 11238, United States</a>
           </address>
-          <ul class="social list-reset">
+          <ul class="social">
             <li class="social__item">
               <a class="social__link" href="https://twitter.com/BKLYNlibrary" target="_blank">
                 <span class="social__icon social__icon--twitter"></span>
               </a>
             </li>
-            <li class="social__item instagram">
-              <a class="insocial__link" href="https://www.instagram.com/bklynlibrary/" target="_blank">
+            <li class="social__item">
+              <a class="social__link" href="https://www.instagram.com/bklynlibrary/" target="_blank">
                 <span class="social__icon social__icon--instagram"></span>
               </a>
             </li>
-            <li class="social__item facebook">
-              <a class="fsocial__link" href="https://www.facebook.com/BrooklynPublicLibrary/" target="_blank">
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com/BrooklynPublicLibrary/" target="_blank">
                 <span class="social__icon social__icon--facebook"></span>
               </a>
             </li>
@@ -617,9 +617,9 @@
 
       <div class="footer__bottom">
         <span class="footer__year">2023</span>
-        <a class="footer__link interactive" href="https://rs.school/js-stage0/" target="_blank">The Rolling Scopes
+        <a class="footer__link" href="https://rs.school/js-stage0/" target="_blank">The Rolling Scopes
           School</a>
-        <a class="footer__link interactive" href="https://github.com/almazka-code" target="_blank">almazka-code</a>
+        <a class="footer__link" href="https://github.com/almazka-code" target="_blank">Olga Smirnova</a>
       </div>
     </div>
   </footer>
