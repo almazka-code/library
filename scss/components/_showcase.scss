@@ -3,10 +3,6 @@
   border: 1px solid $color-dark;
   min-height: 555px;
   @include font($size: 15px, $height: 40px, $spacing: 2px);
-
-  // @include media-mobile {
-  //   @include font($size: 15px, $height: 30px, $spacing: 2px);
-  // }
 }
 
 .showcase__article {
@@ -21,13 +17,6 @@
   position: absolute;
   right: -40px;
   bottom: 0;
-
-  // @include media-mobile-small {
-  //   position: static;
-  //   width: 160px;
-  //   height: auto;
-  //   margin: 0 auto;
-  // }
 }
 
 .showcase__title {
@@ -36,10 +25,6 @@
   text-transform: capitalize;
   @extend %font-add;
   @include font($size: 20px, $height: 40px, $spacing: 2px);
-
-  // @include media-mobile-small {
-  //   @include font($size: 16px, $height: 30px, $spacing: 2px);
-  // }
 
   &::after {
     content: "";
@@ -51,10 +36,6 @@
     height: 1px;
     background-color: $color-primary;
     z-index: 2;
-
-    // @include media-mobile {
-    //   top: 30px;
-    // }
   }
 }
 
@@ -65,27 +46,10 @@
 .showcase__author {
   margin-bottom: 20px;
   text-transform: capitalize;
-
-  // @include media-mobile {
-  //   margin-bottom: 10px;
-  // }
 }
 
 .showcase__text {
   padding-right: 150px;
   margin-bottom: 5px;
   text-transform: capitalize;
-
-
-  // @include media-mobile {
-  //   margin-bottom: 15px;
-  // }
-
-  // @include media-mobile {
-  //   padding-right: 30px;
-  //   text-overflow: ellipsis;
-  //   white-space: nowrap;
-  //   overflow: hidden;
-  // }
 }
-

@@ -10,10 +10,6 @@
   @include media-tablet {
     padding-right: 20px;
   }
-
-  // @include media-mobile-small {
-  //   padding: 15px 10px;
-  // }
 }
 
 .header__wrap {
@@ -22,9 +18,4 @@
   @include media-tablet {
     gap: 35px;
   }
-
-
-  // @include media-mobile {
-  //   gap: 20px;
-  // }
 }

@@ -1,11 +1,5 @@
 .radio-btn {
   display: flex;
-
-  // @include media-mobile {
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  //   align-items: center;
-  // }
 }
 
 .radio-btn__item {
@@ -17,23 +11,7 @@
     @media (max-width: 760px) {
       margin-right: auto;
     }
-
-    // @include media-mobile {
-    //   margin-right: 0;
-    // }
-
-    // @include media-mobile-small {
-    //   min-width: 120px;
-    // }
   }
-
-  // @include media-mobile {
-  //   margin-right: 0;
-  // }
-
-  // @include media-mobile-small {
-  //   min-width: 120px;
-  // }
 }
 
 .radio-btn__label {
@@ -79,5 +57,3 @@
 .radio-btn__input:checked + .radio-btn__custom::before {
   transform: translate(-50%, -50%) scale(1);
 }
-
-
