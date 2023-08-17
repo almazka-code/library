@@ -51,3 +51,9 @@
     transform: translate(-50%, -50%);
   }
 }
+
+.menu--right {
+  @include media-tablet {
+    margin-left: auto;
+  }
+}

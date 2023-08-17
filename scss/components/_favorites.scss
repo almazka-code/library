@@ -10,14 +10,32 @@
 .favorites__radio-btn {
   margin-bottom: 25px;
   transform: translateX(-5px);
+
+  // @include media-mobile {
+  //   transform: translateX(0);
+  // }
 }
 
 .favorites__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(450px, auto));
   grid-row-gap: 40px;
   grid-column-gap: 260px;
   padding-right: 40px;
+
+  @include media-laptop {
+    grid-column-gap: 100px;
+  }
+
+  @include media-tablet {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 550px));
+    justify-content: center;
+  }
+
+  // @include media-mobile {
+  //   padding-right: 0;
+  // }
+
 }
 
 .favorites__item {

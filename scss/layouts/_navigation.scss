@@ -1,5 +1,35 @@
+.nav {
+  @include media-tablet {
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    // width: 43%;
+    // min-width: 332px;
+    width: 332px;
+    height: 570px;
+    z-index: 10;
+    padding: 100px 50px;
+    background-color: $color-dark;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+  }
+}
+
+.nav--active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
 .nav__list {
   @extend %flex;
+
+  @include media-tablet {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .nav__link {
