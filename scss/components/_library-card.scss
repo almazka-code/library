@@ -1,22 +1,60 @@
+.library-card__layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @include media-tablet {
+    justify-content: center;
+    gap: 21px;
+  }
+
+}
+
+.library-card__form {
+  flex-basis: 42%;
+
+  @include media-tablet {
+    flex-basis: 82%;
+  }
+}
+
 .library-card__info {
   max-width: 456px;
   text-align: end;
+
+  @include media-tablet {
+    text-align: center;
+    max-width: 600px;
+  }
 }
 
 .library-card__subtitle {
   margin-bottom: 35px;
   @extend %font-add;
   @include font ($size: 30px, $height: normal, $spacing: 0.6px);
+
+  @include media-tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .library-card__text {
   margin-bottom: 25px;
   letter-spacing: 0.4px;
+
+  @include media-tablet {
+    margin-bottom: 30px;
+  }
 }
 
 .library-card__buttons {
   display: flex;
   justify-content: end;
+
+  @include media-tablet {
+    justify-content: center;
+  }
 }
 
 .library-card__btn:first-child {

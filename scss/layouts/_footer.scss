@@ -1,5 +1,8 @@
-.footer__container {
+.footer {
   background-color: $color-background;
+}
+
+.footer__container {
   color: $color-light;
 }
 
@@ -45,4 +48,14 @@
 
 .footer__year {
   margin-right: 100px;
+
+  @include media-tablet {
+    margin-right: 50px;
+  }
 }
+
+// .footer__school {
+//   @include media-mobile {
+//     display: none;
+//   }
+// }

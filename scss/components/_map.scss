@@ -1,5 +1,14 @@
 .map {
-  width: 50%;
+  flex-basis: 50%;
   height: 414px;
   @include background-image (url("../assets/img/map.jpg"));
+
+  @include media-laptop {
+    flex-basis: 45%;
+  }
+
+  @include media-tablet {
+    margin: 0 auto;
+    flex-basis: 95%;
+  }
 }

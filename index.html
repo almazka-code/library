@@ -20,10 +20,6 @@
       <h1 class="main-title">Brooklyn Public Library</h1>
       <div class="header__wrap">
         <nav class="nav header__nav">
-          <div class="close">
-            <button class="close__btn"></button>
-          </div>
-
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
             <li class="nav__item"><a class="nav__link" href="#favorites">Favorites</a></li>
@@ -36,9 +32,9 @@
           <span class="profile__icon"></span>
         </button>
         <button class="burger">
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
+          <span class="burger__line burger__line--first"></span>
+          <span class="burger__line burger__line--second"></span>
+          <span class="burger__line burger__line--third"></span>
         </button>
       </div>
     </div>
@@ -60,21 +56,29 @@
       <div class="container">
         <h2 class="title">About</h2>
         <p class="about__text">The Brooklyn Library is&nbsp;a&nbsp;free workspace, a&nbsp;large number of&nbsp;books and
-          a&nbsp;cozy coffee shop inside</p>
+          a cozy coffee shop inside</p>
 
         <div class="carousel">
-          <ul class="carousel__list">
-            <li class="carousel__slide carousel__slide--one"></li>
-            <li class="carousel__slide carousel__slide--two"></li>
-            <li class="carousel__slide carousel__slide--three"></li>
-            <li class="carousel__slide carousel__slide--four"></li>
-            <li class="carousel__slide carousel__slide--five"></li>
-          </ul>
+          <div class="carousel__wrap">
+            <button class="carousel__button carousel__button--prev"></button>
+            <ul class="carousel__list">
+              <li class="carousel__slide carousel__slide--one"></li>
+              <li class="carousel__slide carousel__slide--two"></li>
+              <li class="carousel__slide carousel__slide--three"></li>
+              <li class="carousel__slide carousel__slide--four"></li>
+              <li class="carousel__slide carousel__slide--five"></li>
+            </ul>
+            <button class="carousel__button carousel__button--next"></button>
+          </div>
+
           <ul class="carousel__control">
             <li class="carousel__pagination carousel__pagination--active"></li>
             <li class="carousel__pagination"></li>
             <li class="carousel__pagination"></li>
+            <li class="carousel__pagination carousel__pagination--tablet"></li>
+            <li class="carousel__pagination carousel__pagination--tablet"></li>
           </ul>
+
         </div>
       </div>
     </section>
@@ -136,10 +140,10 @@
                     family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.
                   </p>
                 </div>
+                <img class="showcase__img" src="assets/img/books/book1.jpg" alt="The Book Eaters By Sunyi Dean">
                 <div class="showcase__bottom">
                   <button class="btn">Buy</button>
                 </div>
-                <img class="showcase__img" src="assets/img/books/book1.jpg" alt="The Book Eaters By Sunyi Dean">
               </article>
             </li>
             <li class="favorites__item showcase">
@@ -413,20 +417,20 @@
       <div class="container">
         <h2 class="title">Coffee shop</h2>
         <p class="shop__text">In our library, we have of cozy coffee shop, welcoming in customers with frothy
-          cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to
-          cook you best coffee, and also you can try desserts from bakery.</p>
+          cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista
+          to cook you best coffee, and also you can try desserts from bakery.</p>
 
-        <div class="layout-2-columns">
-          <div class="menu">
+        <div class="shop__menu">
+          <div class="menu menu--left">
             <h3 class="menu__title">Coffee &amp;&nbsp;Tea</h3>
             <ul class="menu__list">
               <li class="menu__item">
-                <p class="menu__text menu__text--left">Cold Brew Coffee</p>
+                <p class="menu__text menu__text--left">Cold&nbsp;Brew&nbsp;Coffee</p>
                 <span class="menu__line"></span>
                 <span class="menu__price">$3</span>
               </li>
               <li class="menu__item">
-                <p class="menu__text menu__text--left">French Press Pot</p>
+                <p class="menu__text menu__text--left">French&nbsp;Press&nbsp;Pot</p>
                 <span class="menu__line"></span>
                 <span class="menu__price">$5</span>
               </li>
@@ -452,7 +456,7 @@
               </li>
             </ul>
           </div>
-          <div class="menu">
+          <div class="menu menu--right">
             <h3 class="menu__title menu__title--right">Desserts &amp;&nbsp;Cakes</h3>
             <ul class="menu__list">
               <li class="menu__item">
@@ -496,7 +500,7 @@
     <section class="section contacts" id="contacts">
       <div class="container">
         <h2 class="title">Our Contacts</h2>
-        <div class="layout-2-columns">
+        <div class="contacts__layout">
           <address class="address">
             <p class="address__title">For all Library inquiries:</p>
             <ul class="address__list">
@@ -529,9 +533,9 @@
     <section class="section library-card" id="library-card">
       <div class="container">
         <h2 class="title">Digital Library Cards</h2>
-        <div class="layout-2-columns">
+        <div class="library-card__layout">
 
-          <div>
+          <div class="library-card__form">
             <form class="form" id="form" method="GET" autocomplete="off">
               <h3 class="form__heading">Find your Library card</h3>
               <div class="form__wrapper">
@@ -554,9 +558,8 @@
 
           <div class="library-card__info">
             <h3 class="library-card__subtitle">Get a reader card</h3>
-            <p class="library-card__text">You will be able to see a reader card after logging into account or you can
-              register a
-              new account</p>
+            <p class="library-card__text">You will be able to see a reader card after logging into account or you
+              can register a new account</p>
             <ul class="library-card__buttons">
               <li class="library-card__btn">
                 <button class="btn btn--card">Sign&nbsp;Up</button>
@@ -617,7 +620,7 @@
 
       <div class="footer__bottom">
         <span class="footer__year">2023</span>
-        <a class="footer__link" href="https://rs.school/js-stage0/" target="_blank">The Rolling Scopes
+        <a class="footer__link footer__school" href="https://rs.school/js-stage0/" target="_blank">The Rolling Scopes
           School</a>
         <a class="footer__link" href="https://github.com/almazka-code" target="_blank">Olga Smirnova</a>
       </div>

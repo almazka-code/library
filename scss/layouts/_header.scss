@@ -1,10 +1,30 @@
+.header {
+  background-color: $color-background;
+}
+
 .header__container {
   @extend %flex;
   padding: 20px;
   padding-right: 15px;
-  background-color: $color-background;
+
+  @include media-tablet {
+    padding-right: 20px;
+  }
+
+  // @include media-mobile-small {
+  //   padding: 15px 10px;
+  // }
 }
 
 .header__wrap {
   @include flex (20px);
+
+  @include media-tablet {
+    gap: 35px;
+  }
+
+
+  // @include media-mobile {
+  //   gap: 20px;
+  // }
 }

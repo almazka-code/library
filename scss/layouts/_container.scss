@@ -1,6 +1,9 @@
 .container {
-  // max-width: $content-width;
-  width: $content-width;
+  max-width: $content-width;
   margin: 0 auto;
   padding: 0 20px;
+
+  // @include media-mobile-small {
+  //   padding: 0 10px;
+  // }
 }

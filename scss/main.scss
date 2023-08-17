@@ -12,13 +12,13 @@
 // Layouts
 @import "layouts/container";
 @import "layouts/section";
-@import "layouts/columns";
 @import "layouts/header";
 @import "layouts/navigation";
 @import "layouts/footer";
 
 //Components
 @import "components/buttons";
+@import "components/burger";
 @import "components/welcome";
 @import "components/about";
 @import "components/carousel";
@@ -27,6 +27,7 @@
 @import "components/showcase";
 @import "components/shop";
 @import "components/menu";
+@import "components/contacts";
 @import "components/address";
 @import "components/map";
 @import "components/form";

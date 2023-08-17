@@ -1,0 +1,10 @@
+.contacts__layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @include media-tablet {
+    gap: 100px;
+  }
+}
