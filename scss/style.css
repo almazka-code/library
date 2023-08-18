@@ -856,6 +856,18 @@ ul {
   background-image: url("../assets/svg/button-next.svg");
 }
 
+@media (max-width: 1024px) {
+  .favorites__navigation {
+    background-color: #bb945f;
+    border-radius: 20px;
+    padding: 0 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+}
+
 .favorites__title {
   margin-bottom: 55px;
 }
@@ -927,11 +939,16 @@ ul {
 .radio-btn {
   display: flex;
 }
+@media (max-width: 1024px) {
+  .radio-btn {
+    justify-content: center;
+  }
+}
 
 .radio-btn__item:not(:last-child) {
   margin-right: 80px;
 }
-@media (max-width: 760px) {
+@media (max-width: 770px) {
   .radio-btn__item:not(:last-child) {
     margin-right: auto;
   }
@@ -1003,6 +1020,7 @@ ul {
   position: absolute;
   right: -40px;
   bottom: 0;
+  z-index: 2;
 }
 
 .showcase__title {

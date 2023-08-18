@@ -1,3 +1,15 @@
+.favorites__navigation {
+  @include media-tablet {
+    background-color: $color-primary;
+    border-radius: 20px;
+    padding: 0 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+}
+
 .favorites__title {
   margin-bottom: 55px;
 }

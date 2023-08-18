@@ -1,5 +1,9 @@
 .radio-btn {
   display: flex;
+
+  @include media-tablet {
+    justify-content: center;
+  }
 }
 
 .radio-btn__item {
@@ -10,7 +14,7 @@
   &:not(:last-child) {
     margin-right: 80px;
 
-    @media (max-width: 760px) {
+    @media (max-width: 770px) {
       margin-right: auto;
     }
   }
