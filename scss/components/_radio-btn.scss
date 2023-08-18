@@ -3,7 +3,9 @@
 }
 
 .radio-btn__item {
-  padding: 5px;
+  // display: inline-flex;
+  // padding: 2px;
+  // padding: 5px;
 
   &:not(:last-child) {
     margin-right: 80px;
@@ -12,14 +14,15 @@
       margin-right: auto;
     }
   }
-}
-
-.radio-btn__label {
-  cursor: pointer;
 
   &--active {
     font-weight: 700;
   }
+}
+
+.radio-btn__label {
+  padding: 5px;
+  cursor: pointer;
 }
 
 .radio-btn__input {

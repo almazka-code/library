@@ -92,29 +92,29 @@
 
         <!-- custom radio button -->
         <ul class="favorites__radio-btn radio-btn">
-          <li class="radio-btn__item">
-            <label class="radio-btn__label radio-btn__label--active" data-tab="#winter">
+          <li class="radio-btn__item radio-btn__item--active" data-tab="#winter">
+            <label class="radio-btn__label">
               <input class="radio-btn__input" name="season" type="radio" value="winter" checked>
               <span class="radio-btn__custom"></span>
               Winter
             </label>
           </li>
-          <li class="radio-btn__item">
-            <label class="radio-btn__label" data-tab="#spring">
+          <li class="radio-btn__item" data-tab="#spring">
+            <label class="radio-btn__label">
               <input class="radio-btn__input" name="season" type="radio" value="spring">
               <span class="radio-btn__custom"></span>
               Spring
             </label>
           </li>
-          <li class="radio-btn__item">
-            <label class="radio-btn__label" data-tab="#summer">
+          <li class="radio-btn__item" data-tab="#summer">
+            <label class="radio-btn__label">
               <input class="radio-btn__input" name="season" type="radio" value="summer">
               <span class="radio-btn__custom"></span>
               Summer
             </label>
           </li>
-          <li class="radio-btn__item">
-            <label class="radio-btn__label" data-tab="#autumn">
+          <li class="radio-btn__item" data-tab="#autumn">
+            <label class="radio-btn__label">
               <input class="radio-btn__input" name="season" type="radio" value="autumn">
               <span class="radio-btn__custom"></span>
               Autumn
@@ -127,7 +127,7 @@
         <div class="favorites__group">
 
           <!-- first group - winter -->
-          <ul class="favorites__list winter">
+          <ul class="favorites__list favorites__list--active" id="winter">
             <li class="favorites__item showcase">
               <article class="showcase__article">
                 <div class="showcase__top">
@@ -198,7 +198,7 @@
           </ul>
 
           <!-- second group - spring-->
-          <ul class="favorites__list spring">
+          <ul class="favorites__list" id="spring">
             <li class="favorites__item showcase">
               <article class="showcase__article">
                 <div class="showcase__top">
@@ -267,7 +267,7 @@
           </ul>
 
           <!-- third group -summer-->
-          <ul class="favorites__list summer">
+          <ul class="favorites__list" id="summer">
             <li class="favorites__item showcase">
               <article class="showcase__article">
                 <div class="showcase__top">
@@ -339,7 +339,7 @@
           </ul>
 
           <!-- fourth group - autumn-->
-          <ul class="favorites__list autumn">
+          <ul class="favorites__list" id="autumn">
             <li class="favorites__item showcase">
               <article class="showcase__article">
                 <div class="showcase__top">
@@ -627,7 +627,8 @@
     </div>
   </footer>
 
-  <script src="js/index.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/tabs.js"></script>
 </body>
 
 </html>

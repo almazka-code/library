@@ -13,11 +13,15 @@
 }
 
 .favorites__list {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(auto-fill, minmax(450px, auto));
   grid-row-gap: 40px;
   grid-column-gap: 260px;
   padding-right: 40px;
+
+  &--active {
+    display: grid;
+  }
 
   @include media-laptop {
     grid-column-gap: 100px;
@@ -33,8 +37,32 @@
   position: relative;
 }
 
-.spring,
-.summer,
-.autumn {
-  display: none;
+.transparent {
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fade-in 1s ease forwards;
+}
+
+.fade-out {
+  animation: fade-out 1s ease forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
