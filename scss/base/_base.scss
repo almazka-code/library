@@ -27,6 +27,10 @@ button {
   @extend %transition;
 }
 
+input {
+  outline:none;
+}
+
 img {
   display: block;
   max-width: 100%;

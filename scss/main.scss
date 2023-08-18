@@ -17,6 +17,13 @@
 @import "layouts/footer";
 
 //Components
+// Modal windows
+@import "components/modals";
+@import "components/modal-card";
+@import "components/bank-card";
+@import "components/login";
+
+
 @import "components/buttons";
 @import "components/burger";
 @import "components/welcome";

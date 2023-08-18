@@ -629,6 +629,85 @@
     </div>
   </footer>
 
+  <div class="modals">
+    <div class="modals__overlay">
+
+      <!-- Модальное окно в секции Favorites Buy a library card stert -->
+
+      <div class="modal-card">
+        <h3 class="modal-card__title">Buy a library card</h3>
+        <button class="modal-card__close"></button>
+        <div class="modal-card__layout">
+          <form class="bank-card" id="bank-card-form" method="GET" autocomplete="off">
+            <p class="bank-card__text">Bank card number</p>
+            <input class="bank-card__input" id="bank-card-number" name="bank-card-number" type="number"
+              autocomplete="off">
+
+            <p class="bank-card__text">Expiration code</p>
+            <div class="bank-card__input-wrap">
+              <input class="bank-card__input bank-card__input--small" id="expiration-code" name="expiration-code"
+                type="number" autocomplete="off">
+              <input class="bank-card__input bank-card__input--small" id="expiration-code" name="expiration-code"
+                type="number" autocomplete="off">
+            </div>
+
+            <p class="bank-card__text">CVC</p>
+            <input class="bank-card__input bank-card__input--small bank-card__input--cvc" id="cvc" name="cvc"
+              type="number" autocomplete="off">
+
+            <p class="bank-card__text">Cardholder name</p>
+            <input class="bank-card__input" id="cardholder" name="cardholder" type="text" autocomplete="off">
+
+            <p class="bank-card__text">Postal code</p>
+            <input class="bank-card__input" id="postal-code" name="postal-code" type="number" autocomplete="off">
+
+            <p class="bank-card__text">City / Town</p>
+            <input class="bank-card__input bank-card__input--city" id="city" name="city" type="text" autocomplete="off">
+
+            <div class="bank-card__wrap">
+              <button class="btn">Buy</button>
+              <span class="bank-card__price">$ 25.00</span>
+            </div>
+          </form>
+
+          <p class="modal-card__text">If you are live, work, attend school, or pay property taxes in New York State,
+            you can get a $25 digital library card right now using this online form. Visitors to New York State can
+            also use this form to apply for a temporary card.
+          </p>
+
+        </div>
+      </div>
+      <!-- Модальное окно в секции Favorites Buy a library card end -->
+
+      <!-- Модальное окно LOGIN start -->
+
+      <div class="login">
+        <h3 class="login__title">Login</h3>
+        <button class="login__close"></button>
+        <p class="login__text">E-mail or readers card</p>
+        <input class="login__input" id="email-login" name="email-login" type="email" autocomplete="off">
+
+        <p class="login__text">Password</p>
+        <input class="login__input" id="password-login" name="password-login" type="text" autocomplete="off">
+
+        <div class="login__btn-wrap">
+          <button class="btn">Log In</button>
+        </div>
+
+        <div class="login__wrap">
+          <p class="login__text--small">Don’t have an account?</p>
+          <button class="btn btn--login btn--text">Register</button>
+        </div>
+      </div>
+
+      <!-- Модальное окно LOGIN end -->
+
+    </div>
+
+  </div>
+
+
+
   <script src="js/burger.js"></script>
   <script src="js/tabs.js"></script>
 </body>

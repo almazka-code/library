@@ -26,6 +26,29 @@
   &--card {
     padding: 10px 0;
   }
+
+  &--text {
+    &:hover,
+    &:focus-visible {
+      background-color: transparent;
+      border: none;
+      color: $color-primary;
+    }
+
+    &:active:not(:focus-visible) {
+      background-color: transparent;
+      border: none;
+      color: $color-active;
+    }
+  }
+
+  &--login {
+    color: $color-background;
+    text-decoration-line: underline;
+    @include font($size: 10px, $weight: 700, $height: normal, $spacing: 1px);
+    padding: 0;
+    border: 0;
+  }
 }
 
 /* кнопка входа в личный кабинет */
@@ -56,4 +79,3 @@
 // .profile:active .profile__icon {
 //   background-image: url("../assets/svg/profile-active.svg");
 // }
-
