@@ -28,8 +28,8 @@
             <li class="nav__item"><a class="nav__link" href="#library-card">Library Card</a></li>
           </ul>
         </nav>
-        <button class="profile">
-          <span class="profile__icon"></span>
+        <button class="profile-btn">
+          <span class="profile-btn__icon"></span>
         </button>
         <button class="burger">
           <span class="burger__line burger__line--first"></span>
@@ -683,24 +683,106 @@
 
       <div class="login">
         <h3 class="login__title">Login</h3>
-        <button class="login__close"></button>
-        <p class="login__text">E-mail or readers card</p>
-        <input class="login__input" id="email-login" name="email-login" type="email" autocomplete="off">
+        <button class="login__close modal-close"></button>
 
-        <p class="login__text">Password</p>
-        <input class="login__input" id="password-login" name="password-login" type="text" autocomplete="off">
+        <form class="login__form" id="login-form" method="GET" autocomplete="off">
+          <p class="login__text">E-mail or readers card</p>
+          <input class="login__input" id="email-login" name="email-login" type="email" autocomplete="off">
 
-        <div class="login__btn-wrap">
-          <button class="btn">Log In</button>
-        </div>
+          <p class="login__text">Password</p>
+          <input class="login__input" id="password-login" name="password-login" type="text" autocomplete="off">
 
-        <div class="login__wrap">
-          <p class="login__text--small">Don’t have an account?</p>
-          <button class="btn btn--login btn--text">Register</button>
-        </div>
+          <div class="login__btn-wrap">
+            <button class="btn">Log In</button>
+          </div>
+
+          <div class="login__wrap">
+            <p class="login__text--small">Don’t have an account?</p>
+            <button class="btn btn--login btn--text">Register</button>
+          </div>
+        </form>
       </div>
 
       <!-- Модальное окно LOGIN end -->
+
+      <!-- Модальное окно REGISTER start -->
+      <div class="register">
+        <h3 class="register__title">Register</h3>
+        <button class="register__close modal-close"></button>
+
+        <form class="register__form" id="register-form" method="GET" autocomplete="off">
+          <p class="register__text">First name</p>
+          <input class="register__input" id="first-name-register" name="first-name-register" type="text"
+            autocomplete="off">
+
+          <p class="register__text">Last name</p>
+          <input class="register__input" id="last-name-register" name="last-name-register" type="text"
+            autocomplete="off">
+
+          <p class="register__text">E-mail</p>
+          <input class="register__input" id="email-register" name="email-register" type="email" autocomplete="off">
+
+          <p class="register__text">Password</p>
+          <input class="register__input" id="password-register" name="password-register" type="text" autocomplete="off">
+
+          <div class="register__btn-wrap">
+            <button class="btn">Sign Up</button>
+          </div>
+
+          <div class="register__wrap">
+            <p class="register__text--small">Already have an account?</p>
+            <button class="btn btn--login btn--text">Login</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Модальное окно REGISTER end -->
+
+      <!-- Модальное окно MY PROFILE start -->
+      <div class="profile">
+        <button class="profile__close modal-close"></button>
+        <div class="profile__avatar">
+          <div class="profile__img">JD</div>
+          <p class="profile__name">John Doe</p>
+        </div>
+        <div class="profile__info">
+          <h3 class="profile__title">My profile</h3>
+          <div class="profile__statistics statistics">
+            <div class="statistics__visits statistics__box">
+              <span class="statistics__text">Visits</span>
+              <span class="statistics__icon statistics__icon--visits"></span>
+              <span class="statistics__count statistics__count--visits">23</span>
+            </div>
+
+            <div class="statistics__bonuses statistics__box">
+              <span class="statistics__text">Bonuses</span>
+              <span class="statistics__icon statistics__icon--bonuses"></span>
+              <span class="statistics__count statistics__count--bonuses">1240</span>
+            </div>
+
+            <div class="statistics__books statistics__box">
+              <span class="statistics__text">Books</span>
+              <span class="statistics__icon statistics__icon--books"></span>
+              <span class="statistics__count statistics__count--books">2</span>
+            </div>
+          </div>
+
+          <h4 class="profile__subtitle">Rented books</h4>
+          <ul class="profile__list">
+            <li class="profile__item">The Last Queen, Clive Irving</li>
+            <li class="profile__item">Dominicana, Angie Cruz</li>
+          </ul>
+
+          <div class="profile__wrap">
+            <p>Card number</p>
+            <span class="profile__card-number">F00234030</span>
+            <span class="copy-btn"></span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Модальное окно MY PROFILE end -->
 
     </div>
 

@@ -1,4 +1,4 @@
-.login {
+.register {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -8,13 +8,13 @@
   display: none;
 }
 
-.login__close {
+.register__close {
   position: absolute;
   right: 15px;
   top: 15px;
 }
 
-.login__title {
+.register__title {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -22,7 +22,7 @@
   @include font ($size: 20px, $height: 20px,  $spacing: 0.4px);
 }
 
-.login__text {
+.register__text {
   @include font($size: 15px, $height: 20px, $spacing: 0.3px);
 
   &--small {
@@ -30,17 +30,16 @@
   }
 }
 
-.login__input {
+.register__input {
   width: 200px;
   height: 20px;
   border: 1px solid $color-primary;
 }
 
-.login__btn-wrap {
+.register__btn-wrap {
   margin-bottom: 10px;
 }
 
-.login__wrap {
+.register__wrap {
   display: flex;
-  gap: 5px;
 }

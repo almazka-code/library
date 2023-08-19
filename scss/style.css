@@ -333,7 +333,7 @@ section, main, header, footer, article {
   font-style: normal;
   font-display: swap;
 }
-.social__icon, .burger--active .burger__line--third, .burger--active .burger__line--first, .profile__icon, .modals__overlay, a,
+.social__icon, .burger--active .burger__line--third, .burger--active .burger__line--first, .profile-btn__icon, .modals__overlay, a,
 button {
   transition: all 0.3s ease;
 }
@@ -342,11 +342,11 @@ body {
   font-family: "Inter", Verdana, sans-serif;
 }
 
-.library-card__subtitle, .form__input::placeholder, .form__title, .menu__price, .menu__title, .showcase__title, .welcome__title, .login__title, .modal-card__title, .title, .main-title {
+.library-card__subtitle, .form__input::placeholder, .form__title, .menu__price, .menu__title, .showcase__title, .welcome__title, .profile__title, .register__title, .login__title, .modal-card__title, .title, .main-title {
   font-family: "Forum", Verdana, sans-serif;
 }
 
-.social__item:focus-visible, .profile:focus-visible, .nav__link:focus-visible, .address__link:focus-visible, .footer__link:focus-visible {
+.social__item:focus-visible, .profile-btn:focus-visible, .nav__link:focus-visible, .address__link:focus-visible, .footer__link:focus-visible {
   outline: 0;
   outline: 1px solid #bb945f;
   outline-offset: 3px;
@@ -720,24 +720,19 @@ ul {
   position: relative;
   padding: 20px 25px;
   background-color: #ffffff;
+  display: none;
 }
 
 .login__close {
   position: absolute;
   right: 15px;
   top: 15px;
-  width: 15px;
-  height: 15px;
-  background-image: url("../assets/svg/modal-close-btn-black.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .login__title {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -761,18 +756,204 @@ ul {
 }
 
 .login__input {
-  width: 250px;
-  height: 25px;
+  width: 200px;
+  height: 20px;
   border: 1px solid #bb945f;
 }
 
 .login__btn-wrap {
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .login__wrap {
   display: flex;
+  gap: 5px;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  position: relative;
+  padding: 20px 25px;
+  background-color: #ffffff;
+  display: none;
+}
+
+.register__close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.register__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+}
+
+.register__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+.register__text--small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.register__input {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #bb945f;
+}
+
+.register__btn-wrap {
+  margin-bottom: 10px;
+}
+
+.register__wrap {
+  display: flex;
+}
+
+.profile {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  position: relative;
+  line-height: 20px;
+  display: none;
+}
+
+.profile__close {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.profile__avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  background-color: #0c0c0e;
+}
+
+.profile__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  color: #bb945f;
+  text-transform: capitalize;
+}
+
+.profile__name {
+  background-color: #ffffff;
+  width: 120px;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+.profile__info {
+  flex: 1;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.profile__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.profile__subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #0c0c0e;
+  margin-bottom: 30px;
+}
+
+.profile__list {
+  list-style: initial;
+  padding: 0 30px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.profile__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.profile__wrap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile__card-number {
+  color: #bb945f;
+}
+
+.statistics {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.statistics__box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statistics__icon {
+  width: 20px;
+  height: 21px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.statistics__icon--visits {
+  background-image: url("../assets/svg/visits.svg");
+}
+.statistics__icon--bonuses {
+  background-image: url("../assets/svg/bonuses.svg");
+}
+.statistics__icon--books {
+  background-image: url("../assets/svg/books.svg");
+}
+
+.statistics__count {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.2x;
 }
 
 .btn {
@@ -827,18 +1008,36 @@ ul {
 }
 
 /* кнопка входа в личный кабинет */
-.profile {
+.profile-btn {
   width: 38px;
   height: 38px;
   padding: 5px;
   z-index: 20;
 }
 
-.profile__icon {
+.profile-btn__icon {
   display: inline-block;
   width: 28px;
   height: 28px;
   background-image: url("../assets/svg/profile.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal-close {
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/svg/modal-close-btn-black.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.copy-btn {
+  width: 14px;
+  height: 12px;
+  background-image: url("../assets/svg/copy.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
