@@ -2,6 +2,11 @@
   display: flex;
   gap: 25px;
   margin-bottom: 20px;
+
+  &--small {
+    justify-content: center;
+    display: none;
+  }
 }
 
 .statistics__box {
@@ -10,6 +15,10 @@
   gap: 10px;
   justify-content: space-between;
   align-items: center;
+
+  &--small {
+    gap: 0;
+  }
 }
 
 .statistics__icon {
@@ -36,3 +45,8 @@
   text-align: center;
   @include font ($size: 10px, $height: 20px,  $spacing: 0.2x);
 }
+
+.statistics__text--small {
+  @include font ($size: 10px, $spacing: 0.2px, $height: 20px);
+}
+

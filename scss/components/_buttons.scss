@@ -58,6 +58,18 @@
     padding: 0;
     border: 0;
   }
+
+  &--profile-card {
+    display: none;
+  }
+
+  &--logout {
+    display: none;
+  }
+
+  &--profile {
+    display: none;
+  }
 }
 
 /* кнопка входа в личный кабинет */
@@ -95,7 +107,7 @@
 //   background-image: url("../assets/svg/profile-active.svg");
 // }
 
-.modal-close {
+.modal-close--black {
   width: 15px;
   height: 15px;
   @include background-image (url("../assets/svg/modal-close-btn-black.svg"))

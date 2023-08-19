@@ -1,11 +1,10 @@
-.login {
+.login__container {
   display: flex;
   flex-direction: column;
   gap: 10px;
   position: relative;
   padding: 20px 25px;
   background-color: $color-light;
-  // display: none;
 }
 
 .login__close {
@@ -34,10 +33,6 @@
   width: 200px;
   height: 20px;
   border: 1px solid $color-primary;
-}
-
-.login__btn-wrap {
-  margin-bottom: 10px;
 }
 
 .login__wrap {

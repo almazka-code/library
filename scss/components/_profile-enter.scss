@@ -4,7 +4,6 @@
 
 .profile-enter__menu {
   position: absolute;
-  // display: none;
   opacity: 0;
   visibility: hidden;
   top: 37px;
@@ -15,7 +14,7 @@
   background: $color-light;
   @include font ($size: 15px, $height: 20px);
   text-align: center;
-  transition: all 0.7s ease;
+  transition: all 0.5s ease;
   z-index: 30;
 
   @include media-tablet {
