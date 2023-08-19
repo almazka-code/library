@@ -333,7 +333,7 @@ section, main, header, footer, article {
   font-style: normal;
   font-display: swap;
 }
-.social__icon, .burger--active .burger__line--third, .burger--active .burger__line--first, .profile-btn__icon, .modals__overlay, a,
+.social__icon, .profile-btn__icon, .burger--active .burger__line--third, .burger--active .burger__line--first, .modals__overlay, a,
 button {
   transition: all 0.3s ease;
 }
@@ -720,7 +720,6 @@ ul {
   position: relative;
   padding: 20px 25px;
   background-color: #ffffff;
-  display: none;
 }
 
 .login__close {
@@ -767,7 +766,7 @@ ul {
 
 .login__wrap {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 
 .register {
@@ -824,6 +823,7 @@ ul {
 
 .register__wrap {
   display: flex;
+  gap: 10px;
 }
 
 .profile {
@@ -956,93 +956,6 @@ ul {
   letter-spacing: 0.2x;
 }
 
-.btn {
-  min-width: 75px;
-  padding: 9px 20px;
-  white-space: nowrap;
-  color: #0c0c0e;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: normal;
-  letter-spacing: 1px;
-  border: 1px solid #0c0c0e;
-  border-radius: 2px;
-}
-.btn:hover, .btn:focus-visible {
-  background-color: #bb945f;
-  border: 1px solid #bb945f;
-}
-.btn:active:not(:focus-visible) {
-  background-color: #957548;
-  border: 1px solid #957548;
-}
-.btn--own {
-  color: #bb945f;
-  border: 1px solid #bb945f;
-  pointer-events: none;
-}
-.btn--card {
-  padding: 10px 0;
-}
-.btn--text:hover, .btn--text:focus-visible {
-  background-color: transparent;
-  border: none;
-  color: #bb945f;
-}
-.btn--text:active:not(:focus-visible) {
-  background-color: transparent;
-  border: none;
-  color: #957548;
-}
-.btn--login {
-  color: #0c0c0e;
-  text-decoration-line: underline;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: normal;
-  letter-spacing: 1px;
-  padding: 0;
-  border: 0;
-}
-
-/* кнопка входа в личный кабинет */
-.profile-btn {
-  width: 38px;
-  height: 38px;
-  padding: 5px;
-  z-index: 20;
-}
-
-.profile-btn__icon {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  background-image: url("../assets/svg/profile.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.modal-close {
-  width: 15px;
-  height: 15px;
-  background-image: url("../assets/svg/modal-close-btn-black.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.copy-btn {
-  width: 14px;
-  height: 12px;
-  background-image: url("../assets/svg/copy.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .burger {
   display: none;
   position: relative;
@@ -1097,6 +1010,162 @@ ul {
 
 .stop-scroll {
   overflow: hidden;
+}
+
+.profile-enter {
+  position: relative;
+}
+
+.profile-enter__menu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 37px;
+  right: 8px;
+  width: 80px;
+  height: 115px;
+  padding: 5px 10px;
+  background: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: normal;
+  text-align: center;
+  transition: all 0.7s ease;
+  z-index: 30;
+}
+@media (max-width: 1024px) {
+  .profile-enter__menu {
+    top: 17px;
+  }
+}
+.profile-enter__menu--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-enter__title {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile-enter__title::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  margin: auto;
+  background-color: #bb945f;
+}
+
+.btn {
+  min-width: 75px;
+  padding: 9px 20px;
+  white-space: nowrap;
+  color: #0c0c0e;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 1px;
+  border: 1px solid #0c0c0e;
+  border-radius: 2px;
+}
+.btn:hover, .btn:focus-visible {
+  background-color: #bb945f;
+  border: 1px solid #bb945f;
+}
+.btn:active:not(:focus-visible) {
+  background-color: #957548;
+  border: 1px solid #957548;
+}
+.btn--own {
+  color: #bb945f;
+  border: 1px solid #bb945f;
+  pointer-events: none;
+}
+.btn--card {
+  padding: 10px 0;
+}
+.btn--text:hover, .btn--text:focus-visible {
+  background-color: transparent;
+  border: none;
+  color: #bb945f;
+}
+.btn--text:active:not(:focus-visible) {
+  background-color: transparent;
+  border: none;
+  color: #957548;
+}
+.btn--login {
+  color: #0c0c0e;
+  text-decoration-line: underline;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 1px;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.btn--profile-enter {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: normal;
+  min-width: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  border: 0;
+}
+
+/* кнопка входа в личный кабинет */
+.profile-btn {
+  width: 38px;
+  height: 38px;
+  padding: 5px;
+}
+@media (max-width: 1024px) {
+  .profile-btn {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    z-index: 30;
+  }
+}
+
+.profile-btn__icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url("../assets/svg/profile.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal-close {
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/svg/modal-close-btn-black.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.copy-btn {
+  width: 14px;
+  height: 12px;
+  background-image: url("../assets/svg/copy.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .welcome {

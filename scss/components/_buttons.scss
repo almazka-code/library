@@ -48,6 +48,15 @@
     @include font($size: 10px, $weight: 700, $height: normal, $spacing: 1px);
     padding: 0;
     border: 0;
+    min-width: 0;
+  }
+
+  &--profile-enter {
+    @include font ($size: 15px, $height: 20px);
+    min-width: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    border: 0;
   }
 }
 
@@ -57,7 +66,13 @@
   width: 38px;
   height: 38px;
   padding: 5px;
-  z-index: 20;
+
+  @include media-tablet {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    z-index: 30;
+  }
 }
 
 .profile-btn__icon {

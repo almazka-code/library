@@ -5,7 +5,7 @@
   position: relative;
   padding: 20px 25px;
   background-color: $color-light;
-  display: none;
+  // display: none;
 }
 
 .login__close {
@@ -42,5 +42,5 @@
 
 .login__wrap {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
