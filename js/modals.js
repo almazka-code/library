@@ -1,4 +1,4 @@
-const modalButtons = document.querySelectorAll('.btn');
+const modalButtons = document.querySelectorAll('.btn-modal');
 const modalOverlay = document.querySelector('.modals__overlay');
 const modals = document.querySelectorAll('.modal');
 
@@ -12,8 +12,6 @@ modalButtons.forEach((btn) => {
 		modals.forEach((item) => {
 			item.classList.remove('modal--visible');
 		});
-
-    console.log(document.querySelector(`[data-modal="${currentBtn}"]`));
 
     document.querySelector(`[data-modal="${currentBtn}"]`).classList.add('modal--visible');
 		modalOverlay.classList.add('modals__overlay--visible');

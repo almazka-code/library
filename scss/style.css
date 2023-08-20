@@ -766,6 +766,11 @@ ul {
 }
 
 .login__input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
   width: 200px;
   height: 20px;
   border: 1px solid #bb945f;
@@ -818,6 +823,11 @@ ul {
 }
 
 .register__input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
   width: 200px;
   height: 20px;
   border: 1px solid #bb945f;
@@ -972,6 +982,38 @@ ul {
   letter-spacing: 0.2px;
 }
 
+.notification {
+  display: none;
+}
+.notification--active {
+  display: block;
+}
+
+.notification__text {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #bb945f;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px 40px;
+  max-width: max-content;
+  border-radius: 20px;
+  animation: opacity 2s ease;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .burger {
   display: none;
   position: relative;

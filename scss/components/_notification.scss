@@ -1,0 +1,41 @@
+.notification {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.notification__text {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  // background-color: rgba(0, 0, 0, 0.8);
+  background-color: $color-primary;
+  text-align: center;
+  color: $color-light;
+  padding: 20px 40px;
+  max-width: max-content;
+  border-radius: 20px;
+  animation: opacity 2s ease;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
