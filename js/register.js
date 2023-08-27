@@ -22,9 +22,11 @@ function generateCardNumber () {
   return cardNumber
 }
 
-let arrayOfUsers = JSON.parse(localStorage.getItem('users')) || [];
+// let arrayOfUsers = JSON.parse(localStorage.getItem('users')) || [];
 
 function createAccount() {
+  let arrayOfUsers = JSON.parse(localStorage.getItem('users')) || [];
+
   let user = {
     firstName: firstNameRegister.value,
     lastName: lastNameRegister.value,
@@ -42,32 +44,36 @@ function createAccount() {
 
 function clearRegisterFields() {
   firstNameRegister.value = '';
+  firstNameRegister.classList.remove('red-border');
   lastNameRegister.value = '';
+  lastNameRegister.classList.remove('red-border');
   emailRegister.value = '';
+  emailRegister.classList.remove('red-border');
   passwordRegister.value = '';
+  passwordRegister.classList.remove('red-border');
 }
 
 function userRegister(event) {
   event.preventDefault();
 
   if (!firstNameRegister.value.length) {
-    firstNameRegister.style.borderColor = 'red';
+    firstNameRegister.classList.add('red-border');
     alert('First name is required');
     firstNameRegister.focus();
   } else if (!lastNameRegister.value.length) {
-    lastNameRegister.style.borderColor = 'red';
+    lastNameRegister.classList.add('red-border');
     alert('Last name is required');
     lastNameRegister.focus();
   } else if (!emailRegister.value.length) {
-    emailRegister.style.border = '1px solid red';
+    emailRegister.classList.add('red-border');
     alert('Email is required');
     emailRegister.focus();
   } else if(!emailRegExp.test(emailRegister.value)) {
-    emailRegister.style.borderColor = 'red';
+    emailRegister.classList.add('red-border');
     alert('Email is incorrect');
     emailRegister.focus();
   } else if (passwordRegister.value.length < 8) {
-    passwordRegister.style.borderColor = 'red';
+    passwordRegister.classList.add('red-border');
     alert('Password can not be less than 8 characters');
     passwordRegister.focus();
   } else {

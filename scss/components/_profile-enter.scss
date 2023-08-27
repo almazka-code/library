@@ -10,7 +10,7 @@
   right: 8px;
   width: 80px;
   height: 115px;
-  padding: 5px 10px;
+  padding: 5px 0;
   background: $color-light;
   @include font ($size: 15px, $height: 20px);
   text-align: center;
@@ -30,6 +30,10 @@
 .profile-enter__title {
   position: relative;
   margin-bottom: 20px;
+
+  &--small {
+    font-size: 13px;
+  }
 }
 
 .profile-enter__title::after {

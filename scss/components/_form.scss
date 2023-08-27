@@ -35,6 +35,9 @@
   background-color: $color-light;
   border: none;
   border-radius: 10px;
+  @extend %font-add;
+  @include font ($size: 30px, $height: 50px,  $spacing: 0.6px);
+  color: $color-primary;
 
   &::placeholder {
     color: $color-placeholder;

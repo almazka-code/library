@@ -342,7 +342,7 @@ body {
   font-family: "Inter", Verdana, sans-serif;
 }
 
-.library-card__subtitle, .form__input::placeholder, .form__title, .menu__price, .menu__title, .showcase__title, .welcome__title, .profile__title, .register__title, .login__title, .modal-card__title, .title, .main-title {
+.library-card__subtitle, .form__input::placeholder, .form__input, .form__title, .menu__price, .menu__title, .showcase__title, .welcome__title, .profile__title, .register__title, .login__title, .modal-card__title, .title, .main-title {
   font-family: "Forum", Verdana, sans-serif;
 }
 
@@ -838,9 +838,13 @@ ul {
   gap: 10px;
 }
 
+.red-border {
+  border: 1px solid red;
+}
+
 .profile__container {
   width: 600px;
-  height: 400px;
+  min-height: 400px;
   display: flex;
   position: relative;
   line-height: 20px;
@@ -907,6 +911,7 @@ ul {
 }
 
 .profile__list {
+  min-height: 50px;
   list-style: initial;
   padding: 0 30px;
   letter-spacing: 2px;
@@ -934,6 +939,9 @@ ul {
 }
 .statistics--small {
   justify-content: center;
+  margin-bottom: 0;
+}
+.statistics--inactive {
   display: none;
 }
 
@@ -990,10 +998,13 @@ ul {
 }
 
 .notification__text {
-  position: absolute;
-  top: 50px;
+  position: fixed;
   left: 50%;
+  top: 50px;
+  right: 0;
   transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
   background-color: #bb945f;
   text-align: center;
   color: #ffffff;
@@ -1001,6 +1012,7 @@ ul {
   max-width: max-content;
   border-radius: 20px;
   animation: opacity 2s ease;
+  z-index: 1000;
 }
 
 @keyframes opacity {
@@ -1082,7 +1094,7 @@ ul {
   right: 8px;
   width: 80px;
   height: 115px;
-  padding: 5px 10px;
+  padding: 5px 0;
   background: #ffffff;
   font-style: normal;
   font-weight: 400;
@@ -1106,6 +1118,9 @@ ul {
 .profile-enter__title {
   position: relative;
   margin-bottom: 20px;
+}
+.profile-enter__title--small {
+  font-size: 13px;
 }
 
 .profile-enter__title::after {
@@ -1182,14 +1197,19 @@ ul {
   padding: 0;
   border: 0;
 }
-.btn--profile-card {
+.btn--active {
+  display: inline-block;
+}
+.btn--inactive {
   display: none;
 }
-.btn--logout {
-  display: none;
+.btn--disabled:hover, .btn--disabled:focus-visible {
+  background-color: #ffffff;
+  border: 1px solid #0c0c0e;
 }
-.btn--profile {
-  display: none;
+.btn--disabled:active:not(:focus-visible) {
+  background-color: #ffffff;
+  border: 1px solid #0c0c0e;
 }
 
 /* кнопка входа в личный кабинет */
@@ -1215,6 +1235,28 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.profile-btn__icon--inactive {
+  display: none;
+}
+
+.profile-btn__name {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #bb945f;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+.profile-btn__name--active {
+  display: inline-flex;
 }
 
 .modal-close--black {
@@ -1788,6 +1830,12 @@ ul {
   background-color: #ffffff;
   border: none;
   border-radius: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  color: #bb945f;
 }
 .form__input::placeholder {
   color: #8e8e8e;

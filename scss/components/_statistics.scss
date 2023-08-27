@@ -5,6 +5,10 @@
 
   &--small {
     justify-content: center;
+    margin-bottom: 0;
+  }
+
+  &--inactive {
     display: none;
   }
 }

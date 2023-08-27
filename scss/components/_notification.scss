@@ -7,11 +7,13 @@
 }
 
 .notification__text {
-  position: absolute;
-  top: 50px;
+  position: fixed;
   left: 50%;
+  top: 50px;
+  right: 0;
   transform: translateX(-50%);
-  // background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
   background-color: $color-primary;
   text-align: center;
   color: $color-light;
@@ -19,6 +21,7 @@
   max-width: max-content;
   border-radius: 20px;
   animation: opacity 2s ease;
+  z-index: 1000;
 }
 
 @keyframes opacity {

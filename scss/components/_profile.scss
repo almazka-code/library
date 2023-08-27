@@ -1,6 +1,6 @@
 .profile__container {
   width: 600px;
-  height: 400px;
+  min-height: 400px;
   display: flex;
   position: relative;
   line-height: 20px;
@@ -60,6 +60,7 @@
 }
 
 .profile__list {
+  min-height: 50px;
   list-style: initial;
   padding: 0 30px;
   letter-spacing: 2px;

@@ -59,16 +59,38 @@
     border: 0;
   }
 
-  &--profile-card {
+  // &--profile-card {
+  //   display: none;
+  // }
+
+  // &--logout {
+  //   display: none;
+  // }
+
+  // &--profile {
+  //   display: none;
+  // }
+
+  &--active {
+    display: inline-block;
+  }
+
+  &--inactive {
     display: none;
   }
 
-  &--logout {
-    display: none;
-  }
+  &--disabled {
 
-  &--profile {
-    display: none;
+    &:hover,
+    &:focus-visible {
+      background-color: $color-light;
+      border: 1px solid $color-background;
+    }
+
+    &:active:not(:focus-visible) {
+      background-color: $color-light;
+      border: 1px solid $color-background;
+    }
   }
 }
 
@@ -93,10 +115,30 @@
   height: 28px;
   @include background-image (url("../assets/svg/profile.svg"));
   @extend %transition;
+
+  &--inactive {
+    display: none;
+  }
 }
 
 .profile-btn:focus-visible {
   @extend %outline;
+}
+
+.profile-btn__name {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: $color-light;
+  border-radius: 50%;
+  color: $color-primary;
+  @include font ($size: 15px, $height: 20px);
+
+  &--active {
+    display: inline-flex;
+  }
 }
 
 // .profile:hover .profile__icon {
