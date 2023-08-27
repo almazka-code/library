@@ -1277,6 +1277,10 @@ ul {
   background-repeat: no-repeat;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 .welcome {
   background-image: url("../assets/img/welcome.jpg");
   background-position: center;
@@ -1326,59 +1330,42 @@ ul {
   }
 }
 
+.carousel__container {
+  width: 1400px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media (max-width: 1439px) {
+  .carousel__container {
+    width: 925px;
+  }
+}
+@media (max-width: 1024px) {
+  .carousel__container {
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 450px;
+  }
+}
+
 .carousel__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 25px;
   margin-bottom: 35px;
-}
-@media (max-width: 1024px) {
-  .carousel__list {
-    justify-content: center;
-    margin-bottom: 20px;
-    flex-basis: 450px;
-  }
+  width: 2350px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel__slide {
-  width: 100%;
-  min-height: 560px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  flex-shrink: 0;
+  flex-basis: 450px;
 }
-@media (max-width: 1024px) {
-  .carousel__slide {
-    flex-basis: 450px;
-  }
-}
-.carousel__slide--one {
-  background-image: url("../assets/img/about/about1.jpg");
-}
-.carousel__slide--two {
-  background-image: url("../assets/img/about/about2.jpg");
-}
-@media (max-width: 1024px) {
-  .carousel__slide--two {
-    display: none;
-  }
-}
-.carousel__slide--three {
-  background-image: url("../assets/img/about/about3.jpg");
-}
-@media (max-width: 1024px) {
-  .carousel__slide--three {
-    display: none;
-  }
-}
-.carousel__slide--four {
-  display: none;
-  background-image: url("../assets/img/about/about4.jpg");
-}
-.carousel__slide--five {
-  display: none;
-  background-image: url("../assets/img/about/about5.jpg");
+
+.carousel__image {
+  width: 450px;
+  height: 560px;
 }
 
 .carousel__control {
@@ -1395,11 +1382,19 @@ ul {
   background-color: transparent;
   cursor: pointer;
 }
-.carousel__pagination--tablet {
+.carousel__pagination--four {
+  display: none;
+}
+@media (max-width: 1439px) {
+  .carousel__pagination--four {
+    display: inline-block;
+  }
+}
+.carousel__pagination--five {
   display: none;
 }
 @media (max-width: 1024px) {
-  .carousel__pagination--tablet {
+  .carousel__pagination--five {
     display: inline-block;
   }
 }

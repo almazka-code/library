@@ -160,3 +160,7 @@
   height: 12px;
   @include background-image (url("../assets/svg/copy.svg"))
 }
+
+.disabled {
+  pointer-events: none;
+}
