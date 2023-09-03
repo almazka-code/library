@@ -1,3 +1,6 @@
+import {modalOverlay} from "./modals.js";
+
+export const bankCardForm = document.querySelector('.bank-card');
 let bankCardNumber = document.getElementById('bank-card-number');
 let firstExpirationCode = document.querySelector('.expiration-code--first');
 let secondExpirationCode = document.querySelector('.expiration-code--second');
@@ -6,7 +9,19 @@ let cardholder = document.getElementById('cardholder');
 let postalCode = document.getElementById('postal-code');
 let city = document.getElementById('city');
 let buttonBuySubscription = document.querySelector('.btn-buy');
-let buyBook = document.querySelectorAll('.btn-book');
+export let buttonsBook = document.querySelectorAll('.btn-book');
+export let buttonsProduct = document.querySelectorAll('.btn-product');
+
+export function replaceUser(currentUser) {
+  const users = JSON.parse(localStorage.getItem('users'));
+  const searchName = currentUser.firstName;
+  const index = users.findIndex(el => el.firstName === searchName);
+
+  users.splice(index, 1, currentUser);
+  localStorage.setItem('users', JSON.stringify(users));
+  console.log(users);
+}
+
 
 function buySubscription(event) {
   event.preventDefault();
@@ -41,12 +56,27 @@ function buySubscription(event) {
     city.focus();
   } else {
     buttonBuySubscription.classList.remove('btn--disabled');
-    buyBook.forEach(btn => {
-      btn.removeAttribute('data-btn')
+    // buyBook.forEach(btn => {
+    //   btn.setAttribute('data-btn', 'sale');
+    // });
+
+    buttonsBook.forEach(btn => {
+      btn.classList.add('btn--inactive');
     });
-    // clearRegisterFields()
-    modalWindowRegister.classList.remove('modal--visible');
+
+    buttonsProduct.forEach(btn => {
+      btn.classList.remove('btn--inactive');
+    })
+
+    bankCardForm.reset(); //очистить поля формы
     modalOverlay.classList.remove('modals__overlay--visible');
+
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    user.bookSubscription = true;
+    localStorage.setItem('currentUser', JSON.stringify(user));
+
+    replaceUser(user)
+
     // document.querySelector('.notification__text').textContent = 'Text copied to clipboard';
     //   notice.classList.add('notification--active');
     //   setTimeout(function () {
@@ -57,3 +87,5 @@ function buySubscription(event) {
 }
 
 buttonBuySubscription.addEventListener('click', buySubscription);
+
+

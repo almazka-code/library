@@ -1,3 +1,33 @@
+import {buttonsBook} from "./buy-card.js";
+import {buttonsProduct} from "./buy-card.js";
+
+// Rented books в модальном окне My profile
+export function rentedBooks(user) {
+  const books = user.books; //массив с книгами
+  const booksList = document.querySelector('.profile__list');
+
+  //сначала удалить все книги, иначе будет задвоение
+  while (booksList.firstChild) {
+    booksList.removeChild(booksList.firstChild);
+  }
+
+  //отрисовать все книги
+  books.forEach(book => {
+    let node = document.createElement('li');
+    node.classList.add('profile__item');
+    node.appendChild(document.createTextNode(book));
+    booksList.appendChild(node);
+  })
+}
+
+export function numberOfBooks(user) {
+  const profileCountBooks = document.querySelectorAll('.statistics__count--books');
+  profileCountBooks.forEach(book => {
+    book.textContent = user.books.length;
+  });
+}
+
+
 export default function authorizedUser(account) {
   // Изменяющиеся после авторизации поля
   const bookButton = document.querySelectorAll('.btn-book');
@@ -12,11 +42,8 @@ export default function authorizedUser(account) {
   const buttonMenuLogOut = document.querySelector('.btn--logout');
 
   // модальное окно my Profile
-  const profileImage =document.querySelector('.profile__img');
+  const profileImage = document.querySelector('.profile__img');
   const profileName = document.querySelector('.profile__name');
-  const profileVisits = document.querySelectorAll('.statistics__count--visits');
-  const profileCountBooks = document.querySelectorAll('.statistics__count--books');
-  const booksList = document.querySelector('.profile__list');
   const profileCardNumber = document.querySelector('.profile__card-number');
 
   //section digital library card
@@ -31,7 +58,6 @@ export default function authorizedUser(account) {
   const buttonCardLogin = document.querySelector('.btn-card-login');
   const buttonCardProfile = document.querySelector('.btn-card-profile');
 
-   // let account = users.find(user => (user.email === loginEmail.value || user.cardNumber === loginEmail.value) && user.password === loginPassword.value);
   let initials = (account.firstName.slice(0, 1) + account.lastName.slice(0, 1)).toUpperCase();
   let fullName = account.firstName + ' ' + account.lastName;
 
@@ -48,20 +74,11 @@ export default function authorizedUser(account) {
 
   profileImage.textContent = initials;
   profileName.textContent = fullName;
-  // profileVisits
-  profileCountBooks.forEach(book => {
-    book.textContent = account.books.length;
-  });
+
   profileCardNumber.textContent = account.cardNumber;
 
-// Rented books
-  const books = account.books; //массив с книгами
-  books.forEach(book => {
-    let node = document.createElement('li');
-    node.classList.add('profile__item');
-    node.appendChild(document.createTextNode(book));
-    booksList.appendChild(node);
-  })
+  rentedBooks(account);
+  numberOfBooks(account);
 
   formCardName.value = fullName;
   formCardNumber.value = account.cardNumber;
@@ -74,7 +91,28 @@ export default function authorizedUser(account) {
   buttonCardLogin.classList.add('btn--inactive');
   buttonCardProfile.classList.remove('btn--inactive');
 
-  bookButton.forEach(btn => {
-    btn.setAttribute('data-btn', 'buy-card');
-  })
+
+  if (account.bookSubscription === false) {
+    bookButton.forEach(btn => {
+      btn.setAttribute('data-btn', 'buy-card');
+    })
+  } else {
+    buttonsBook.forEach(btn => {
+      btn.classList.add('btn--inactive');
+    });
+
+    buttonsProduct.forEach(btn => {
+      btn.classList.remove('btn--inactive');
+    })
+
+    let booksOfUsers = account.books;
+    buttonsProduct.forEach(btn => {
+      booksOfUsers.forEach(book => {
+        if (btn.getAttribute('data-product') === book) {
+          btn.textContent = 'Own';
+          btn.classList.add('btn--own');
+        }
+      })
+    })
+  }
 }

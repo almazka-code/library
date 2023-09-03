@@ -18,6 +18,7 @@
   width: 200px;
   height: 20px;
   border: 1px solid $color-primary;
+  @include font($size: 15px, $height: 20px, $spacing: 0.3px);
 
   &--small {
     width: 45px;

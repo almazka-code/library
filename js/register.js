@@ -1,4 +1,8 @@
-const registerForm = document.querySelector('.register__form');
+import authorizedUser from "./autorize.js";
+import {modalOverlay} from "./modals.js";
+
+//объявление переменных
+export const registerForm = document.querySelector('.register__form');
 const firstNameRegister = document.getElementById('first-name-register');
 const lastNameRegister = document.getElementById('last-name-register');
 const emailRegister = document.getElementById('email-register');
@@ -9,6 +13,7 @@ const notification = document.querySelector('.notification');
 
 const emailRegExp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
+// генерация cardNumber
 function generateCardNumber () {
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
 
@@ -22,8 +27,7 @@ function generateCardNumber () {
   return cardNumber
 }
 
-// let arrayOfUsers = JSON.parse(localStorage.getItem('users')) || [];
-
+// создание аккаунта - объект с данными пользователя
 function createAccount() {
   let arrayOfUsers = JSON.parse(localStorage.getItem('users')) || [];
 
@@ -32,27 +36,18 @@ function createAccount() {
     lastName: lastNameRegister.value,
     email: emailRegister.value,
     password: passwordRegister.value,
-    visits: 0,
-    bonuses: 0,
     books: [],
+    bookSubscription: false,
     cardNumber: generateCardNumber()
   }
 
   arrayOfUsers.push(user);
   localStorage.setItem('users', JSON.stringify(arrayOfUsers));
+
+  return user
 }
 
-function clearRegisterFields() {
-  firstNameRegister.value = '';
-  firstNameRegister.classList.remove('red-border');
-  lastNameRegister.value = '';
-  lastNameRegister.classList.remove('red-border');
-  emailRegister.value = '';
-  emailRegister.classList.remove('red-border');
-  passwordRegister.value = '';
-  passwordRegister.classList.remove('red-border');
-}
-
+// валидация формы register + выполнение действий после успешно пройденной валидации
 function userRegister(event) {
   event.preventDefault();
 
@@ -77,10 +72,16 @@ function userRegister(event) {
     alert('Password can not be less than 8 characters');
     passwordRegister.focus();
   } else {
-    createAccount()
-    clearRegisterFields()
-    modalWindowRegister.classList.remove('modal--visible');
-    modalOverlay.classList.remove('modals__overlay--visible');
+    let newUser = createAccount(); // создание аккаунта - объект с данными пользователя
+    localStorage.setItem('currentUser', JSON.stringify(newUser)); //сохранение в localStorage текущего пользователя
+    authorizedUser(newUser); // вход в личный кабинет
+
+    // clearRegisterFields(); // очистить поля формы регистрации после отправки формы
+    registerForm.reset(); // очистить поля формы регистрации после отправки формы
+    modalWindowRegister.classList.remove('modal--visible'); // закрыть модальное окно
+    modalOverlay.classList.remove('modals__overlay--visible'); // закрыть модальное окно
+
+    // надпись об успешной регистрации
     notification.classList.add('notification--active');
     setTimeout(function () {
     notification.classList.remove('notification--active');

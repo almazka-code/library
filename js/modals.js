@@ -1,6 +1,9 @@
 const modalButtons = document.querySelectorAll('.btn-modal');
-const modalOverlay = document.querySelector('.modals__overlay');
+export const modalOverlay = document.querySelector('.modals__overlay');
 const modals = document.querySelectorAll('.modal');
+import {loginForm} from "./login.js";
+import {bankCardForm} from "./buy-card.js";
+import {registerForm} from "./register.js";
 
 const closeButtons = document.querySelectorAll('.modal-close');
 
@@ -20,9 +23,14 @@ modalButtons.forEach((btn) => {
 
 function closeModalWindow() {
   modalOverlay.classList.remove('modals__overlay--visible');
-    modals.forEach((item) => {
-			item.classList.remove('modal--visible');
-		});
+  modals.forEach((item) => {
+    item.classList.remove('modal--visible');
+  });
+
+  loginForm.reset();
+  bankCardForm.reset();
+  registerForm.reset();
+
 }
 
 modalOverlay.addEventListener('click', (event) => {

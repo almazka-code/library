@@ -697,6 +697,11 @@ ul {
   width: 200px;
   height: 20px;
   border: 1px solid #bb945f;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
 }
 .bank-card__input--small {
   width: 45px;

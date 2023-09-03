@@ -80,7 +80,6 @@
   }
 
   &--disabled {
-
     &:hover,
     &:focus-visible {
       background-color: $color-light;
@@ -92,6 +91,8 @@
       border: 1px solid $color-background;
     }
   }
+
+
 }
 
 /* кнопка входа в личный кабинет */
