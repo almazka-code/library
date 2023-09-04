@@ -14,8 +14,9 @@ export let buttonsProduct = document.querySelectorAll('.btn-product');
 
 export function replaceUser(currentUser) {
   const users = JSON.parse(localStorage.getItem('users'));
-  const searchName = currentUser.firstName;
-  const index = users.findIndex(el => el.firstName === searchName);
+  const searchFirstName = currentUser.firstName;
+  const searchLastName = currentUser.lastName;
+  const index = users.findIndex(el => el.firstName === searchFirstName && el.lastName === searchLastName);
 
   users.splice(index, 1, currentUser);
   localStorage.setItem('users', JSON.stringify(users));
