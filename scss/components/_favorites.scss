@@ -1,8 +1,7 @@
 .favorites__navigation {
   @include media-tablet {
-    background-color: $color-primary;
-    border-radius: 20px;
-    padding: 0 10px;
+    background-color: $color-light;
+    padding: 0 15px;
     text-align: center;
     position: sticky;
     top: 0;

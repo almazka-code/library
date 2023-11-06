@@ -9,7 +9,7 @@ const closeButtons = document.querySelectorAll('.modal-close');
 
 modalButtons.forEach((btn) => {
 	btn.addEventListener('click', (event) => {
-    profileMenu.classList.remove('profile-enter__menu--active');
+    document.querySelector('.profile-enter__menu').classList.remove('profile-enter__menu--active');
 		let currentBtn = event.currentTarget.getAttribute('data-btn');
 
 		modals.forEach((item) => {

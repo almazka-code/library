@@ -19,4 +19,4 @@ async function copyTextToClipboard(text) {
   } catch (err) {
       console.error('Error in copying text: ', err);
   }
-}
+};

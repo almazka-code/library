@@ -1,7 +1,7 @@
 import {rentedBooks} from "./autorize.js";
+import {numberOfBooks} from "./autorize.js";
 import {buttonsProduct} from "./buy-card.js";
 import {replaceUser} from "./buy-card.js";
-import {numberOfBooks} from "./autorize.js";
 
 buttonsProduct.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -17,14 +17,5 @@ buttonsProduct.forEach(btn => {
 
     btn.textContent = 'Own';
     btn.classList.add('btn--own');
-
-
   })
 })
-
-
-
-
-
-
-

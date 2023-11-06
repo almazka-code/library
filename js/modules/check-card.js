@@ -21,4 +21,4 @@ formBtn.addEventListener('click', (event) => {
       document.getElementById('card-number').value = '';
     }, 10000);
   }
-})
+});
