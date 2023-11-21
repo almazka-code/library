@@ -1,0 +1,44 @@
+.notification {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.notification__text {
+  position: fixed;
+  left: 50%;
+  top: 50px;
+  right: 0;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  background-color: $color-primary;
+  text-align: center;
+  color: $color-light;
+  padding: 20px 40px;
+  max-width: max-content;
+  border-radius: 20px;
+  animation: opacity 2s ease;
+  z-index: 1000;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
