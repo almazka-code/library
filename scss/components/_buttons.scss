@@ -157,9 +157,11 @@
 }
 
 .copy-btn {
-  width: 14px;
-  height: 12px;
-  @include background-image (url("../assets/svg/copy.svg"))
+  width: 18px;
+  height: 16px;
+  padding: 2px;
+  @include background-image (url("../assets/svg/copy.svg"));
+
 }
 
 .disabled {

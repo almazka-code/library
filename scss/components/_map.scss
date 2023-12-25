@@ -1,7 +1,6 @@
 .map {
   flex-basis: 50%;
   height: 414px;
-  @include background-image (url("../assets/img/map.jpg"));
 
   @include media-laptop {
     flex-basis: 45%;
@@ -11,4 +10,9 @@
     margin: 0 auto;
     flex-basis: 95%;
   }
+}
+
+.map__frame {
+  width: 100%;
+  height: 414pX;
 }
