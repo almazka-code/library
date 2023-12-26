@@ -30,7 +30,6 @@ function closeModalWindow() {
   loginForm.reset();
   bankCardForm.reset();
   registerForm.reset();
-
 }
 
 modalOverlay.addEventListener('click', (event) => {
@@ -42,5 +41,5 @@ modalOverlay.addEventListener('click', (event) => {
 closeButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     closeModalWindow()
-  })
-})
+  });
+});

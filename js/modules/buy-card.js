@@ -23,7 +23,6 @@ export function replaceUser(currentUser) {
   console.log(users);
 }
 
-
 function buySubscription(event) {
   event.preventDefault();
 
@@ -57,9 +56,6 @@ function buySubscription(event) {
     city.focus();
   } else {
     buttonBuySubscription.classList.remove('btn--disabled');
-    // buyBook.forEach(btn => {
-    //   btn.setAttribute('data-btn', 'sale');
-    // });
 
     buttonsBook.forEach(btn => {
       btn.classList.add('btn--inactive');
@@ -76,17 +72,8 @@ function buySubscription(event) {
     user.bookSubscription = true;
     localStorage.setItem('currentUser', JSON.stringify(user));
 
-    replaceUser(user)
-
-    // document.querySelector('.notification__text').textContent = 'Text copied to clipboard';
-    //   notice.classList.add('notification--active');
-    //   setTimeout(function () {
-    //   notice.classList.remove('notification--active');
-    //   }, 2000);
-
+    replaceUser(user);
   }
 }
 
 buttonBuySubscription.addEventListener('click', buySubscription);
-
-

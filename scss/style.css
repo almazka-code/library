@@ -1241,6 +1241,9 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.profile-btn__icon:hover {
+  filter: invert(53%) sepia(69%) saturate(261%) hue-rotate(355deg) brightness(100%) contrast(89%);
+}
 .profile-btn__icon--inactive {
   display: none;
 }
@@ -1274,8 +1277,9 @@ ul {
 }
 
 .copy-btn {
-  width: 14px;
-  height: 12px;
+  width: 18px;
+  height: 16px;
+  padding: 2px;
   background-image: url("../assets/svg/copy.svg");
   background-position: center;
   background-size: cover;
@@ -1420,11 +1424,12 @@ ul {
 
 .carousel__button {
   display: none;
-  width: 27px;
+  width: 50px;
   height: 50px;
   padding: 5px;
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (max-width: 1024px) {
   .carousel__button {
@@ -1456,12 +1461,12 @@ ul {
 }
 
 .favorites__text {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-weight: 700;
 }
 
 .favorites__radio-btn {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   transform: translateX(-5px);
 }
 
@@ -1768,10 +1773,6 @@ ul {
 .map {
   flex-basis: 50%;
   height: 414px;
-  background-image: url("../assets/img/map.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 @media (max-width: 1366px) {
   .map {
@@ -1783,6 +1784,11 @@ ul {
     margin: 0 auto;
     flex-basis: 95%;
   }
+}
+
+.map__frame {
+  width: 100%;
+  height: 414pX;
 }
 
 .form {
@@ -1948,6 +1954,9 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.social__icon:hover {
+  filter: invert(53%) sepia(69%) saturate(261%) hue-rotate(355deg) brightness(100%) contrast(89%);
 }
 
 .social__icon--twitter {

@@ -18,4 +18,4 @@ buttonsProduct.forEach(btn => {
     btn.textContent = 'Own';
     btn.classList.add('btn--own');
   })
-})
+});

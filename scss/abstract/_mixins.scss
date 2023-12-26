@@ -6,17 +6,6 @@
   letter-spacing: $spacing;
 }
 
-
-// @mixin columns ($width) {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   flex-wrap: wrap;
-//   >* {
-//       flex-basis: $width;
-//   }
-// }
-
 @mixin flex ($gap) {
   display: flex;
   justify-content: space-between;

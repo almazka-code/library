@@ -10,7 +10,6 @@ copyButton.addEventListener('click', () => {
 async function copyTextToClipboard(text) {
   try {
       await navigator.clipboard.writeText(text);
-      // alert('Text copied to clipboard');
       document.querySelector('.notification__text').textContent = 'Text copied to clipboard';
       notice.classList.add('notification--active');
       setTimeout(function () {

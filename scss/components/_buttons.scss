@@ -59,18 +59,6 @@
     border: 0;
   }
 
-  // &--profile-card {
-  //   display: none;
-  // }
-
-  // &--logout {
-  //   display: none;
-  // }
-
-  // &--profile {
-  //   display: none;
-  // }
-
   &--active {
     display: inline-block;
   }
@@ -91,8 +79,6 @@
       border: 1px solid $color-background;
     }
   }
-
-
 }
 
 /* кнопка входа в личный кабинет */
@@ -116,6 +102,10 @@
   height: 28px;
   @include background-image (url("../assets/svg/profile.svg"));
   @extend %transition;
+
+  &:hover {
+    filter: invert(53%) sepia(69%) saturate(261%) hue-rotate(355deg) brightness(100%) contrast(89%);
+  }
 
   &--inactive {
     display: none;
@@ -142,24 +132,17 @@
   }
 }
 
-// .profile:hover .profile__icon {
-//   background-image: url("../assets/svg/profile-hover.svg");
-// }
-
-// .profile:active .profile__icon {
-//   background-image: url("../assets/svg/profile-active.svg");
-// }
-
 .modal-close--black {
   width: 15px;
   height: 15px;
-  @include background-image (url("../assets/svg/modal-close-btn-black.svg"))
+  @include background-image (url("../assets/svg/modal-close-btn-black.svg"));
 }
 
 .copy-btn {
-  width: 14px;
-  height: 12px;
-  @include background-image (url("../assets/svg/copy.svg"))
+  width: 18px;
+  height: 16px;
+  padding: 2px;
+  @include background-image (url("../assets/svg/copy.svg"));
 }
 
 .disabled {
