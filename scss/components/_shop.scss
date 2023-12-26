@@ -1,0 +1,14 @@
+.shop {
+  letter-spacing: 2px;
+}
+
+.shop__text {
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.shop__menu {
+  @include flex(40px);
+  flex-wrap: wrap;
+}

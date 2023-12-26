@@ -1,0 +1,41 @@
+.address {
+  font-style: normal;
+}
+
+.address__title {
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  @include font($weight: 700, $size: 20px, $height: 40px, $spacing: 2px);
+
+  &--staff {
+    margin-bottom: 20px;
+  }
+}
+
+.address__list {
+  margin-bottom: 40px;
+}
+
+.address__item {
+  display: flex;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.address__text {
+  margin-right: 5px;
+  text-transform: capitalize;
+}
+
+.address__link {
+  @extend %interactive;
+}
+
+.address__staff {
+  display: flex;
+  letter-spacing: 2px;
+}
+
+.address__mail {
+  font-weight: 700;
+}

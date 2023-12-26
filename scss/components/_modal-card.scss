@@ -1,0 +1,37 @@
+.modal-card {
+  position: relative;
+  width: 640px;
+  height: 540px;
+  background-color: $color-light;
+}
+
+.modal-card__close {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  width: 15px;
+  height: 15px;
+  @include background-image (url("../assets/svg/modal-close-btn-white.svg"))
+}
+
+.modal-card__title {
+  @include font($size: 40px, $height: 20px, $spacing: 0.8px);
+  @extend %font-add;
+  text-align: center;
+  color: $color-light;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: $color-background;
+}
+
+.modal-card__layout {
+  @include flex(40px);
+  align-items: start;
+  padding: 30px 35px 40px 40px;
+}
+
+.modal-card__text {
+  width: 330px;
+  color: $color-placeholder;
+  @include font ($size: 15px, $height: 20px, $spacing: 2px)
+}

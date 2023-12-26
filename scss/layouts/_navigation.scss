@@ -1,0 +1,53 @@
+.nav {
+  @include media-tablet {
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    z-index: 10;
+    padding: 100px 50px;
+    background-color: $color-dark;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+  }
+}
+
+.nav--active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__list {
+  @extend %flex;
+
+  @include media-tablet {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.nav__link {
+  padding: 0 15px;
+  line-height: 50px;
+  color: $color-light;
+
+  &:focus-visible {
+    @extend %outline;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: $color-primary;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-color: $color-primary;
+  }
+
+  &:active:not(:focus-visible) {
+    color: $color-active;
+    text-decoration-color: $color-active;
+  }
+}

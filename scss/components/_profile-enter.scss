@@ -1,0 +1,49 @@
+.profile-enter {
+  position: relative;
+}
+
+.profile-enter__menu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 37px;
+  right: 8px;
+  width: 80px;
+  height: 115px;
+  padding: 5px 0;
+  background: $color-light;
+  @include font ($size: 15px, $height: 20px);
+  text-align: center;
+  transition: all 0.5s ease;
+  z-index: 30;
+
+  @include media-tablet {
+    top: 17px;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.profile-enter__title {
+  position: relative;
+  margin-bottom: 20px;
+
+  &--small {
+    font-size: 13px;
+  }
+}
+
+.profile-enter__title::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  right: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  margin: auto;
+  background-color: $color-primary;
+}

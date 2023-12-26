@@ -1,0 +1,18 @@
+.map {
+  flex-basis: 50%;
+  height: 414px;
+
+  @include media-laptop {
+    flex-basis: 45%;
+  }
+
+  @include media-tablet {
+    margin: 0 auto;
+    flex-basis: 95%;
+  }
+}
+
+.map__frame {
+  width: 100%;
+  height: 414pX;
+}
