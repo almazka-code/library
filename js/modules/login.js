@@ -47,5 +47,4 @@ loginButton.addEventListener('click', userLogin);
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 if (currentUser !== null) {
   authorizedUser(currentUser)
-}
-
+};

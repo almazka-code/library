@@ -59,18 +59,6 @@
     border: 0;
   }
 
-  // &--profile-card {
-  //   display: none;
-  // }
-
-  // &--logout {
-  //   display: none;
-  // }
-
-  // &--profile {
-  //   display: none;
-  // }
-
   &--active {
     display: inline-block;
   }
@@ -91,8 +79,6 @@
       border: 1px solid $color-background;
     }
   }
-
-
 }
 
 /* кнопка входа в личный кабинет */
@@ -146,18 +132,10 @@
   }
 }
 
-// .profile:hover .profile__icon {
-//   background-image: url("../assets/svg/profile-hover.svg");
-// }
-
-// .profile:active .profile__icon {
-//   background-image: url("../assets/svg/profile-active.svg");
-// }
-
 .modal-close--black {
   width: 15px;
   height: 15px;
-  @include background-image (url("../assets/svg/modal-close-btn-black.svg"))
+  @include background-image (url("../assets/svg/modal-close-btn-black.svg"));
 }
 
 .copy-btn {
@@ -165,7 +143,6 @@
   height: 16px;
   padding: 2px;
   @include background-image (url("../assets/svg/copy.svg"));
-
 }
 
 .disabled {

@@ -27,7 +27,6 @@ export function numberOfBooks(user) {
   });
 }
 
-
 export default function authorizedUser(account) {
   // Изменяющиеся после авторизации поля
   const bookButton = document.querySelectorAll('.btn-book');
