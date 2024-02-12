@@ -26,8 +26,8 @@
 .favorites__list {
   display: none;
   grid-template-columns: repeat(auto-fill, minmax(450px, auto));
-  grid-row-gap: 40px;
-  grid-column-gap: 260px;
+  row-gap: 40px;
+  column-gap: 260px;
   padding-right: 40px;
 
   &--active {
@@ -35,7 +35,7 @@
   }
 
   @include media-laptop {
-    grid-column-gap: 100px;
+    column-gap: 100px;
   }
 
   @include media-tablet {

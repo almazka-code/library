@@ -1473,8 +1473,8 @@ ul {
 .favorites__list {
   display: none;
   grid-template-columns: repeat(auto-fill, minmax(450px, auto));
-  grid-row-gap: 40px;
-  grid-column-gap: 260px;
+  row-gap: 40px;
+  column-gap: 260px;
   padding-right: 40px;
 }
 .favorites__list--active {
@@ -1482,7 +1482,7 @@ ul {
 }
 @media (max-width: 1366px) {
   .favorites__list {
-    grid-column-gap: 100px;
+    column-gap: 100px;
   }
 }
 @media (max-width: 1024px) {
