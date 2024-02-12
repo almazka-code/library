@@ -1,0 +1,21 @@
+.header {
+  background-color: $color-background;
+}
+
+.header__container {
+  @extend %flex;
+  padding: 20px;
+  padding-right: 15px;
+
+  @include media-tablet {
+    padding-right: 20px;
+  }
+}
+
+.header__wrap {
+  @include flex (20px);
+
+  @include media-tablet {
+    gap: 35px;
+  }
+}

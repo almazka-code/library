@@ -1,0 +1,60 @@
+.form {
+  width: 100%;
+  text-align: center;
+}
+
+.form__heading {
+  margin-bottom: 30px;
+  @include font ($size: 30px, $spacing: 0.6px, $height: normal);
+}
+
+.form__wrapper {
+  padding: 17px 20px 25px 20px;
+  border: 3px solid $color-primary;
+}
+
+.form__wrap {
+  margin-bottom: 20px;
+  padding: 20px 20px 0 20px;
+  background-color: $color-primary;
+}
+
+.form__title {
+  margin-bottom: 20px;
+  text-align: left;
+  @extend %font-add;
+  @include font ($size: 30px, $height: 50px,  $spacing: 0.6px);
+}
+
+.form__input {
+  width: 100%;
+  min-width: 520px;
+  height: 66px;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  background-color: $color-light;
+  border: none;
+  border-radius: 10px;
+  @extend %font-add;
+  @include font ($size: 30px, $height: 50px,  $spacing: 0.6px);
+  color: $color-primary;
+
+  &::placeholder {
+    color: $color-placeholder;
+    @extend %font-add;
+    @include font ($size: 30px, $height: 50px,  $spacing: 0.6px);
+  }
+
+  @include media-laptop {
+    min-width: 400px;
+  }
+
+  @include media-tablet {
+    min-width: 520px;
+  }
+}
+
+.form__btn {
+  padding: 10px 40px;
+  font-size: 20px;
+}

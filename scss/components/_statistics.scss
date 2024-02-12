@@ -1,0 +1,55 @@
+.statistics {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+
+  &--small {
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  &--inactive {
+    display: none;
+  }
+}
+
+.statistics__box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  &--small {
+    gap: 0;
+  }
+}
+
+.statistics__icon {
+  width: 20px;
+  height: 21px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &--visits {
+    background-image:url("../assets/svg/visits.svg");
+  }
+
+  &--bonuses {
+    background-image:url("../assets/svg/bonuses.svg");
+  }
+
+  &--books {
+    background-image:url("../assets/svg/books.svg");
+  }
+}
+
+.statistics__count {
+  text-align: center;
+  @include font ($size: 10px, $height: 20px,  $spacing: 0.2x);
+}
+
+.statistics__text--small {
+  @include font ($size: 10px, $spacing: 0.2px, $height: 20px);
+}

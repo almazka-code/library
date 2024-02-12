@@ -1,0 +1,55 @@
+.footer {
+  background-color: $color-background;
+}
+
+.footer__container {
+  color: $color-light;
+}
+
+.footer__top {
+  @extend %flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.footer__left {
+  max-width: 230px;
+}
+
+.footer__address {
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  @extend %interactive;
+  font-style: normal;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.footer__text {
+  text-align: right;
+}
+
+.footer__time-table--weekdays {
+  margin-bottom: 10px;
+}
+
+.footer__bottom {
+  @extend %flex;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  letter-spacing: 2px;
+}
+
+.footer__year {
+  margin-right: 100px;
+
+  @include media-tablet {
+    margin-right: 50px;
+  }
+}

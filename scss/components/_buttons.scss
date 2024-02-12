@@ -1,0 +1,150 @@
+.btn {
+  min-width: 75px;
+  padding: 9px 20px;
+  white-space: nowrap;
+  color: $color-background;
+  @include font($weight: 700, $size: 10px, $height: normal, $spacing: 1px);
+  @include border ($color: $color-background, $radius: 2px);
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+
+  &:active:not(:focus-visible) {
+    background-color: $color-active;
+    border: 1px solid $color-active;
+  }
+
+  &--own {
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    pointer-events: none;
+  }
+
+  &--card {
+    padding: 10px 0;
+  }
+
+  &--text {
+    &:hover,
+    &:focus-visible {
+      background-color: transparent;
+      border: none;
+      color: $color-primary;
+    }
+
+    &:active:not(:focus-visible) {
+      background-color: transparent;
+      border: none;
+      color: $color-active;
+    }
+  }
+
+  &--login {
+    color: $color-background;
+    text-decoration-line: underline;
+    @include font($size: 10px, $weight: 700, $height: normal, $spacing: 1px);
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+
+  &--profile-enter {
+    @include font ($size: 15px, $height: 20px);
+    min-width: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    border: 0;
+  }
+
+  &--active {
+    display: inline-block;
+  }
+
+  &--inactive {
+    display: none;
+  }
+
+  &--disabled {
+    &:hover,
+    &:focus-visible {
+      background-color: $color-light;
+      border: 1px solid $color-background;
+    }
+
+    &:active:not(:focus-visible) {
+      background-color: $color-light;
+      border: 1px solid $color-background;
+    }
+  }
+}
+
+/* кнопка входа в личный кабинет */
+
+.profile-btn {
+  width: 38px;
+  height: 38px;
+  padding: 5px;
+
+  @include media-tablet {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    z-index: 30;
+  }
+}
+
+.profile-btn__icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  @include background-image (url("../assets/svg/profile.svg"));
+  @extend %transition;
+
+  &:hover {
+    filter: invert(53%) sepia(69%) saturate(261%) hue-rotate(355deg) brightness(100%) contrast(89%);
+  }
+
+  &--inactive {
+    display: none;
+  }
+}
+
+.profile-btn:focus-visible {
+  @extend %outline;
+}
+
+.profile-btn__name {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: $color-light;
+  border-radius: 50%;
+  color: $color-primary;
+  @include font ($size: 15px, $height: 20px);
+
+  &--active {
+    display: inline-flex;
+  }
+}
+
+.modal-close--black {
+  width: 15px;
+  height: 15px;
+  @include background-image (url("../assets/svg/modal-close-btn-black.svg"));
+}
+
+.copy-btn {
+  width: 18px;
+  height: 16px;
+  padding: 2px;
+  @include background-image (url("../assets/svg/copy.svg"));
+}
+
+.disabled {
+  pointer-events: none;
+}

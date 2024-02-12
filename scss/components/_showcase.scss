@@ -1,0 +1,55 @@
+.showcase {
+  padding: 15px 20px;
+  border: 1px solid $color-dark;
+  min-height: 555px;
+  @include font($size: 15px, $height: 40px, $spacing: 2px);
+}
+
+.showcase__article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.showcase__img {
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  z-index: 2;
+}
+
+.showcase__title {
+  position: relative;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  @extend %font-add;
+  @include font($size: 20px, $height: 40px, $spacing: 2px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 60px;
+    height: 1px;
+    background-color: $color-primary;
+    z-index: 2;
+  }
+}
+
+.showcase__book {
+  text-transform: uppercase;
+}
+
+.showcase__author {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.showcase__text {
+  padding-right: 150px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
